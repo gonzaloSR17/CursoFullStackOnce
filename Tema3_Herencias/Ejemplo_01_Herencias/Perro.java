@@ -63,5 +63,9 @@ public class Perro extends Mamifero implements IAnimal {
 		return null;
 	}
 	
+	public static void main(String[] args) {
+		Perro spike = new Perro("Spike", 30, true);
+	}
+	
 
 }
