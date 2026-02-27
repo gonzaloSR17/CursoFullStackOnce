@@ -58,7 +58,7 @@ public class Flamenco extends Ave {
 				"\n Nombre Domestico = " +this.getNombre()+
 				"\n Peso = " +this.getPeso()+
 				"\n ¿ Esta comiendo ? = " +this.isEstarComiendo()+
-				"\n ¿Es un Ave volador ? = " +this.toString()+
+				"\n ¿Es un Ave volador ? = " +super.toString()+
 				"\n }";
 	}
 	
