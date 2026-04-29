@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+        <style>
+            body {
+                padding: 40px;
+                background-color: #faf8f9;
+            }
+
+            .col {
+                padding: 20px;
+                margin-bottom: 10px;
+                border-radius: 8px;
+                font-weight: bold;
+            }
+
+            h1 {
+                color: #7952b3;
+                margin-bottom: 30px;
+            }
+
+            .ejemplo{
+                background-color: white;
+                padding: 30px;
+                border-radius: 10px;
+                margin-bottom: 30px;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            }
+
+            /* Ejemplo 3 aniacion de rebote */
+
+            .box-bounce {
+                width: 80px;
+                height: 80px;
+                background: linear-gradient(45deg, #4facfe, #00f2e0);
+            }
+
+
+            @keyframes bounce {
+                0%, 100% {
+                    /* translateY mueve verticalmente sin afectar otros elementos */
+                    transform: translateY(0);
+
+                }
+
+                50% {
+                    transform: translateY(-80px);
+                }
+            }
+
+
+            /* Ejemplo 4: Animacion de deslizaminetos */
+
+            .box-slide {
+                width: 100px;
+                height: 100px;
+                background: linear-gradient(45deg, #fa709a,#fee140);
+                border-radius: 10px;
+                animation: slide 3s ease-in-out infinite;
+            }
+
+            @keyframes slide {
+                0%, 100% {
+                    transform: translateX(-50px);
+                }
+                50% {
+                    transform: translateX(50px);
+                }
+
+            }
+
+            .wave-container {
+                display: flex;
+
+            } 
+
+            .wave-bar {
+                width: 10px;
+                height: 40px;
+                background: linear-gradient(45deg, #667eea, #764ba2);
+                border-radius: 5px;
+                animation: wave 1s ease-in-out infinite;
+            }
+
+            .wave-bar:nth-child(1) {
+                animation-delay: 0s;
+                 
+            }
+
+            @keyframes wave {
+                0%, 100% {
+                    transform: scaleY(1);
+
+                }
+
+                50% {
+                    transform: scaleY(1.5);
+                }
+            }
+            /* Ejemplo 5: Animacion de cambio de color */
+        
+            .box-color{
+                width: 100px;
+                height: ;
+            }
+
+            .box-combined {
+
+            }
+
+            .animated-button::before {
+                content: : '';
+                position: absolute;
+
+            }
+
+            animated-button:hover::before {
+                left: 100%;
+            }
+
+            animated-button:hover
+        </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="row">
+        <div class="col-4">
+            <div class="card m-2">
+                <div class="card-title">
+                    <h1>Animacion</h1>
+                </div>
+                <div class="card-body text-center">
+                    <h6>...</h6>
+                    <p></p>
+
+                    <div class="container d-flex flex-grow-1 bg-light">
+                        <div class="box-slide">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-4">
+            <div class="card m-2">
+                <div class="card-title">
+                    <h1>Animacion</h1>
+                </div>
+                <div class="card-body text-center">
+                    <h6>...</h6>
+                    <p></p>
+
+                    <div class="container d-flex bg-light">
+                        <div class="box-slide d-flex justify-content-center">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="box-slide">
+
+    </div>
+    <div class="container">
+<!-- 
+         Ejemplo 1 -->
+
+        <div class="ejemplo">
+             <h3 class="text-center">Colores de fondos básicos (bg-*)</h3>
+            <div class="container text-center">
+                <div class="row">
+                    <!-- Columna 1 -->
+                    <div class="col bg-primary text-white">
+                        <p>Columna con bg primary</p>
+                    </div>
+
+                    <!-- Columna 2 -->
+                    <div class="col bg-success text-white">
+                        <p>col con bg success</p>
+                    </div>
+
+                    <!-- Columna 3 -->
+                    <div class="col bg-danger text-white">
+                        <p>col con bg-danger</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ejemplo 2: Colores suaves/pasteles -->
+
+    <div class="ejemplo">
+             <h3 class="text-center">Colores suaves (bg-*-subtle)</h3>
+            <div class="container text-center">
+                <div class="row">
+                    <!-- Columna 1 -->
+                    <div class="col bg-primary-subtle">
+                        <p>Columna con bg primary</p>
+                    </div>
+
+                    <!-- Columna 2 -->
+                    <div class="col bg-success-subtle">
+                        <p>col con bg success</p>
+                    </div>
+
+                    <!-- Columna 3 -->
+                    <div class="col bg-danger-subtle">
+                        <p>col con bg-danger</p>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    </div>
+
+    <!-- Ejemplo 3: Degradado -->
+
+    <div class="ejemplo">
+            <h3 class="text-center">Colores degradados (bg-gradient)</h3>
+            <div class="container text-center">
+                <div class="row">
+                    <!-- Columna 1 -->
+                    <div class="col bg-primary text-white bg-gradient">
+                        <p>Columna con bg primary</p>
+                    </div>
+
+                    <!-- Columna 2 -->
+                    <div class="col bg-success text-white bg-gradient">
+                        <p>col con bg success</p>
+                    </div>
+
+                    <!-- Columna 3 -->
+                    <div class="col bg-danger text-white bg-gradient">
+                        <p>col con bg-danger</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ejercicio 4: Colores con bordes -->
+
+    <div class="ejemplo">
+            <h3 class="text-center">Colores degradados (bg-gradient)</h3>
+            <div class="container text-center">
+                <div class="row">
+                    <!-- Columna 1 -->
+                    <div class="col bg-info-subtle border border-info border-3">
+                        <p>Columna con bg primary</p>
+                    </div>
+
+                    <!-- Columna 2 -->
+                    <div class="col bg-danger-subtle border border-danger border-3">
+                        <p>col con bg success</p>
+                    </div>
+
+                    <!-- Columna 3 -->
+                    <div class="col bg-success-subtle border border-success border-3">
+                        <p>col con bg-danger</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ejercicio 5: Colores oscuros y claros -->
+
+    <div class="ejemplo">
+            <h3 class="text-center">Colores degradados (bg-gradient)</h3>
+            <div class="container text-center">
+                <div class="row">
+                    <!-- Columna 1 -->
+                    <div class="col bg-dark text-white">
+                        <p>Columna con bg primary</p>
+                    </div>
+
+                    <!-- Columna 2 -->
+                    <div class="col bg-light text-dark border">
+                        <p>col con bg success</p>
+                    </div>
+
+                    <!-- Columna 3 -->
+                    <div class="col bg-body-secundary">
+                        <p>col con bg-danger</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+</body>
+</html>

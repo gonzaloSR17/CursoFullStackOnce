@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- boostrap icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+</head>
+<style>
+    :root {
+
+        /* COLORES DE MARCAS PERSONALIZADOS */
+        /* Colores que asimilan a amazon */
+        --color-navbar-primary: #131921;
+        --color-navbar-secundary: #232f3e;
+        --color-search-button: #febd96;
+        --color-search-button-hover: #f3a847;
+        --color-hero-start: #a8d5e2;
+        --color-hero-end: #d4ebf2;
+
+        /* Tamaños y espaciados */
+
+        --hero-min-height: 300px;
+        --badge-position-top: 10px;
+        --badge-position-left: 10px;
+        --product-image-height: 150px;
+
+        /* Efectos y transiciones */
+
+        --transition-speed: 0.2s;
+        --hover-lift: -5px;
+    }
+
+    main {
+        background: linear-gradient(135deg, #f6f6f6 0%, #636363 100%);
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+
+    }
+
+    /* Navbar principal - usa la variable de color */
+
+    .navbar-dark-custom {
+        background-color: var(--color-navbar-primary);
+    }
+
+    /* Navbar secundario */
+
+    .navbar-secundary {
+        background-color: var(--color-navbar-secundary);
+    }
+
+    .hero-banner {
+        background: linear-gradient(to bottom,
+                var(--color-hero-start) 0%,
+                var(--color-hero-end) 100%);
+        min-height: var(--hero-min-height);
+        position: relative;
+    }
+
+    /* Boton de busqueda - usa variables de color */
+
+    .search-btn {
+        background-color: var(--color-search-button);
+        border-color: var(--color-search-button);
+    }
+
+    /* Hover del boton de bsqueda */
+
+    .search-btn:hover {
+        background-color: var(--color-search-button-hover);
+        border-color: var(--color-search-button-hover);
+    }
+
+    .card-offer {
+        transition: transform var(--transition-speed);
+    }
+
+    .card-offer:hover {
+        /* El desplazamiento usa la variable de elevacion */
+        transform: translateY(var(--hover-lift));
+    }
+
+    /* Badge de descuento - usa la variable de posicion */
+    .badge-discount {
+        position: absolute;
+        top: var(--badge-position-top);
+        left: var(--badge-position-left);
+        z-index: 10;
+    }
+
+    /* Altura de la imafenes de producto - usa variable */
+
+    .product-image {
+
+        height: var(--product-image-height);
+        object-fit: cover;
+    }
+</style>
+
+<body>
+
+    <!-- PRIMERA BARRA DE NAVEGACION -->
+
+    <nav class="navbar navbar-dark navbar-expand-lg navbar-dark-custom">
+
+        <!-- Ocupa todo el ancho de la panatlla el container-fluid (OCUPLA LO MISMO QUE LA BARRA DE NAVEGACION) funciona paracido a justify content between-->
+        <div class="container-fluid">
+
+            <!-- nav-brand -> Logotipo de mi navbar
+            text-white -> Texto en blanco
+            fs -> font-size
+            fw-bold -> En negrita -->
+
+            <a href="#" class="navbar-brand text-white fw-bold fs-4">Amazon.es</a>
+
+            <!-- <img src="Amazon_logo.svg.png" height="30px" width="70px" class="shadow-sm" alt="amazon"> -->
+
+            <!-- d-flex -> Display flex (flex-box caja responsiva)
+            align-items-center -> Alinear VERTICALMENTE al centrado
+            text-white -> Texto blsnco
+            me-3 -> Margin end (derecha) 3 unidades a la derecha -->
+
+            <!-- UBICACION -->
+            <div class="d-flex align-items-center text-white me-3">
+                <i class="bi bi-geo-alt me-1"></i>
+
+                <!-- d-none me lo oculta en movil
+                d-lg-block hipocritamente me lo muestra en grande pantallas -->
+                <div class="d-none d-lg-block">
+                    <small>Entrega en Flamingo landia</small><br>
+                    <strong>Actualizar ubicaciñon</strong>
+                </div>
+            </div>
+
+
+            <!-- BARRA DE BUSQUEDA -->
+            <!-- flex-grow-1: Hace que este elemento crezca para ocupar el espacio disponible
+            mx-3: Margin horizontal por los lados -->
+
+            <form class="d-flex flex-grow-1 mx-3">
+
+                <!-- para hacer un grupo -->
+                <!-- w-auto pilla el ancho automatico -->
+
+                <div class="input-group">
+                    <select name="" class="form-select w-auto" id="">
+                        <option value="">Juguetes</option>
+                        <option value="">Peluches</option>
+                        <option value="">Funko Pop</option>
+                        <option value="">Mangas</option>
+                        <option value="">Art Books</option>
+                    </select>
+
+                    <input type="search" class="form-control" placeholder="Buscar en Amazon.es" aria-label="Buscar">
+                    <button class="btn btn-warning" type="submit"><i class="bi bi-search"></i></button>
+
+
+                </div>
+
+            </form>
+
+            <!-- MENU DE USUARIO -->
+            <div class="d-flex align-items-center ms-auto">
+                <a href="#" class="text-white text-decoration-none me-3 d-none d-lg-block">
+                    <small>Hola, identificate</small> <br>
+                    <strong>Cuenta y listas</strong>
+                </a>
+
+                <a href="#" class="text-white text-decoration-none me-3 d-none d-lg-block">
+                    <small>Devoluciones</small> <br>
+                    <strong>y Pedidos</strong>
+                </a>
+
+                <a href="#" class="text-white text-decoration-none position-relative">
+                    <i class="bi bi-cart3 fs-3"></i>
+                    <span class="Badge bg-warning"></span>
+                    <strong>Cesta</strong>
+                </a>
+
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- NAVBAR SECUNDARIO -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-secundary">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#secondaryNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="secondaryNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="#" class="nav-link"><i class="bi bi-list"></i> Todo</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Amazon Haul</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Supermercado</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Los mas vendidos</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Amazon Basics</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Últimas Novedades</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Ofertas</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Hogar y cocina</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Informática</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Prime</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Libros</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- EL BANNER -->
+    <div class="hero-banner">
+        <!-- Lo estiramos hacia abajo -->
+        <div class="container-fluid h-100">
+            <div class="row align-items-center h-100">
+                <div class="col-12 col-md-6">
+                    <div class="py-5 px-4">
+                        <h1 class="display-4 fw-bold">Nueva Tecnologia, <br>nuevas posibilidades </h1>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 d-none d-md-flex justify-content-end">
+                    <div class="d-flex gap-3 align-items-center pe-4">
+                        <div class="bg-dark text-white p-3 rounded">M</div>
+                        <div class="bg-dark text-white p-3 rounded">M</div>
+                        <div class="bg-primary text-white p-3 rounded">M</div>
+                        <div class="bg-dark text-white p-3 rounded">M</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- OFERTAS -->
+    <div class="container-fluid mt-4 mb-5">
+        <!-- 
+        ROW-COLS-1 COLUMNA EN MOVILES
+        MD: 2 COLUMNAS EN TABLER
+        LG_ 4 COMULMANS
+        GAP: 4 ESPACIADO DE 4 -->
+        <div class="row row-cols-1 row-cols-md-4 row-cols-lg-4 g-3">
+
+            <!-- Primera columna -->
+
+            <div class="col">
+                
+                    <div class="card h-100 shadow-sm card-offer">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Grandes Ofertas</h5>
+                            <div class="row g-2">
+                                <!-- Producto 1 -->
+                                <div class="col-6 position-relative">
+                                    <div class="bg-secondary text-white text-center p-4 rounded w-100">
+                                        📺
+                                    </div>
+                                    <span class="badge bg-danger badge-discount">-12%</span>
+                                    <small class="d-block mt-1 text-danger">Ofertas Flamingueras</small>
+                                </div>
+
+                                <!-- Producto 2 -->
+
+                                <div class="col-6 position-relative">
+                                    <div class="bg-primary text-white text-center p-4 rounded w-100">
+                                        📺
+                                    </div>
+                                    <span class="badge bg-danger badge-discount">-12%</span>
+                                    <small class="d-block mt-1 text-danger">Ofertas Flamingueras</small>
+                                </div>
+
+                                <!-- Producto 3 -->
+
+                                <div class="col-6 position-relative">
+                                    <div class="bg-warning text-white text-center p-4 rounded w-100">
+                                        📺
+                                    </div>
+                                    <span class="badge bg-danger badge-discount">-12%</span>
+                                    <small class="d-block mt-1 text-danger">Ofertas Flamingueras</small>
+
+                                </div>
+
+                                <!-- Producto 4 -->
+
+                                <div class="col-6 position-relative">
+                                    <div class="bg-success text-white text-center p-4 rounded w-100">
+                                        📺
+                                    </div>
+                                    <span class="badge bg-danger badge-discount">-12%</span>
+                                    <small class="d-block mt-1 text-danger">Ofertas Flamingueras</small>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+            </div>
+
+            <div class="col">
+                <div class="card h-100 shadow-sm card-offer">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Grandes Ofertas</h5>
+                        <div class="row g-2">
+
+                            <!-- Producto 1 -->
+                            <div class="col-6 position-relative">
+                                <div class="bg-secondary text-white text-center p-4 rounded w-100">
+                                    📺
+                                </div>
+                                <span class="badge bg-danger badge-discount">-12%</span>
+                                <small class="d-block mt-1 text-danger">Ofertas Flamingueras</small>
+                            </div>
+
+                            <!-- Producto 2 -->
+
+                            <div class="col-6 position-relative">
+                                <div class="bg-primary text-white text-center p-4 rounded w-100">
+                                    📺
+                                </div>
+                                <span class="badge bg-danger badge-discount">-12%</span>
+                                <small class="d-block mt-1 text-danger">Ofertas Flamingueras</small>
+                            </div>
+
+                            <!-- Producto 3 -->
+
+                            <div class="col-6 position-relative">
+                                <div class="bg-warning text-white text-center p-4 rounded w-100">
+                                    📺
+                                </div>
+                                <span class="badge bg-danger badge-discount">-12%</span>
+                                <small class="d-block mt-1 text-danger">Ofertas Flamingueras</small>
+
+                            </div>
+
+                            <!-- Producto 4 -->
+
+                            <div class="col-6 position-relative">
+                                <div class="bg-success text-white text-center p-4 rounded w-100">
+                                    📺
+                                </div>
+                                <span class="badge bg-danger badge-discount">-12%</span>
+                                <small class="d-block mt-1 text-danger">Ofertas Flamingueras</small>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 shadow-sm card-offer">
+                    <div class="bg-secondary text-white text-center p-5 rounded-top">
+                                    🎅
+                                </div>
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Grandes Ofertas</h5>
+                                
+                                <span class="badge bg-danger badge-discount">-12%</span>
+                                <small class="d-block mt-1 text-danger">Ofertas Flamingueras</small>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 shadow-sm card-offer">
+                    <div class="bg-secondary text-white text-center p-5 rounded-top">
+                                    🎅
+                                </div>
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Grandes Ofertas</h5>
+                                
+                                <span class="badge bg-danger badge-discount">-12%</span>
+                                <small class="d-block mt-1 text-danger">Ofertas Flamingueras</small>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
+
+    </div>
+    </div>
+
+    <!-- <div class="container">
+            <div class="d-flex gap-5">
+                <div>
+                    <p class="lead text-white fs-6">Entrega en Flamingo World</p>
+                    <a href="#" class="fw-bold text-white fs-6">Actualizar Ubicacion</a>
+                </div>
+
+                <div>
+                    <form action="">
+                        <div class="row">
+                            <div class="col-6">
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="col-6">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div>
+                    <p class="lead text-white fs-6">Hola, Identifiquese</p>
+                    <a href="#" class="fw-bold text-white fs-6">Cuentas y lista</a>
+                </div>
+
+                <div>
+                    <p class="lead text-white fs-6">Devoluciones</p>
+                    <a href="#" class="fw-bold text-white fs-6">y pedidos</a>
+                </div>
+
+                <div class="d-flex align-items-center">
+                    <p class="fs-6 text-white">Cesta</p>
+                </div>
+            </div>
+        </div>
+    </nav> -->
+
+    <!-- <main class="my-5">
+        <div class="container p-2">
+            <div class="row">
+                <div class="col-6">
+                    <h1 class="fw-bold">Nueva Tecnología,</h1>
+                    <h1 class="fw-bold">nuevas posibilidades</h1>
+                </div>
+
+                <div class="col-6">
+                    <div class="row align-items-center d-flex flex-row-reverse">
+                        <div class="bg-primary">
+                            A
+                        </div>
+                        <div class="bg-primary">
+                            A
+                        </div>
+                        <div class="bg-primary">
+                            A
+                        </div>
+                        <div class="bg-primary">
+                            A
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h6 class="card-title">Oferta Top</h6>
+                        <div class="row">
+                            <div class="col-3 col-lg-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="bg-primary text-white text-center p-5">
+                                            <p>Producto 1</p>
+                                        </div>
+                                        <p>Oferta Flash</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-3 col-lg-6">
+
+                            </div>
+                            <div class="col-3 col-lg-6">
+
+                            </div>
+                            <div class="col-3 col-lg-6">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+
+            </div>
+            <div class="col-3">
+
+            </div>
+            <div class="col-3">
+
+            </div>
+        </div>
+    </main> -->
+
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <p class="mb-0">2024 Amazon.es - Ejemplo educativo con Boostrap</p>
+            <small class="text-white">Creado por Gonzalo Sánchez-Ros Paz</small>
+        </div>
+    </footer>
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

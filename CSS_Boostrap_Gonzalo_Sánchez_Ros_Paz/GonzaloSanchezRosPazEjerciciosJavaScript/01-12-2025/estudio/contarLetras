@@ -1,0 +1,24 @@
+// Contar letras
+// Crea una función contarLetras(str) que devuelva un objeto con el número de veces que aparece cada letra en la cadena.
+
+
+function contarLetras(str) {
+    // Creamos objeto...
+    const objeto = {}
+
+    for (let index = 0; index < str.length; index++) {
+        
+        const letra = str[index]; // almacenamos la letra
+
+        // Si en el objeto existe la letra almacenada, devuelve true
+        if(objeto[letra]) {
+            objeto[letra]++
+        } else { // Si no existe inicializamos
+            objeto[letra] = 1 //agrega z: 0
+        }
+
+    }
+    return objeto
+}
+
+console.log(contarLetras("zootropolis"))

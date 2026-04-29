@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <h1>Ejercicios de Formularios con Boostrap 5.3</h1>
+    <div class="container my-5">
+
+        <div class="card mb-2 rounded">
+            <div class="card-title p-4 bg-primary text-white rounded">
+                <h1>1. Overview - Formulario Básico</h1>
+            </div>
+            <div class="card-body">
+                <form action="">
+
+                    <div class="mb-3">
+                        <label class="form-label" for="idemail">Dirección de email</label><br>
+                        <input type="text" name="idemail" id="idemail" placeholder="nombre@ejemplo.com"
+                            class="form-control mb-2">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="contrasenia" class="form-label">Tu Contraseña Personal</label><br>
+                        <input type="password" name="contrasenia" id="contrasenia" class="form-control mb-4">
+                    </div>
+
+
+                    <div class="mb-3 form-checker">
+                        <input type="checkbox" name="recuerdame" id="recuerdame">
+                        <label for="recuerdame" class="form-label">Recuerdame</label><br>
+                    </div>
+
+                    <button class="btn btn-primary">Enviar</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="card mb-2 rounded">
+            <div class="card-title p-4 bg-success text-white rounded">
+                <h1>2. Form Control - Tipos de Input</h1>
+            </div>
+            <div class="card-body">
+                <form action="">
+
+                    <div class="mb-3">
+                        <label class="form-label" for="idtext">Texto normal</label><br>
+                        <input type="text" name="idtext" id="idtext" placeholder="nombre@ejemplo.com"
+                            class="form-control mb-2">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label" for="idemail2">Dirección de email</label><br>
+                        <input type="text" name="idemail2" id="idemail2" class="form-control mb-2">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label" for="idnumber">Número</label><br>
+                        <input type="number" name="idemail2" id="idemail2" class="form-control mb-2">
+                    </div>
+
+
+                    <div class="mb-3">
+                        <label class="form-label" for="idnumber">Número</label><br>
+                        <input type="number" name="idnumber" id="idnumber" class="form-control mb-2">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label" for="idfecha">Fecha</label><br>
+                        <input type="date" name="idfecha" id="idfecha" placeholder="dd/mm/aaaa"
+                            class="form-control mb-2">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label" for="idtextarea">Fecha</label><br>
+                        <textarea id="comments" class="form-control" name="comments" rows="1" cols="50">
+                        Escribe un comentario largo....
+                        </textarea>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="" class="form-label">Campo deshabilitado</label><br>
+                        <input type="text" class="form-control" value="No puedes editar esto" disabled>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label" for="idfecha">Campo de solo de lectura</label><br>
+                        <input type="text" name="id_read" id="id_read"  placeholder="Solo lectura" class="form-control mb-2" readonly>
+                    </div>
+                        
+                    <div class="mb-3">
+                        <label class="form-label" for="idfecha">Input pequeño</label><br>
+                        <input type="text" name="id_read" id="id_read"  placeholder="Solo lectura" class="form-control form-control-sm mb-2">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label" for="idfecha">Input grandse</label><br>
+                        <input type="text" name="id_read" id="id_read"  placeholder="Solo lectura" class="form-control form-control form-control-lg mb-2">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label" for="idcolor">Selector de color</label><br>
+                        <input type="color" name="idcolor"value="#0d6efd" id="idcolor" class="form-control-color mb-2 rounded">
+                    </div>
+
+                    <button class="btn btn-primary">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        /* {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;} */
+
+        body {
+            font-family: 'Courier New', monospace;
+            background: linear-gradient(to bottom, #000428, #004e92);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: white;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        h1 {
+            color: #00ff00;
+            text-shadow: 0 0 10px #00ff00;
+            margin-bottom: 20px;
+        }
+
+        #gameCanvas {
+            border: 3px solid #00ff00;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+            background: #000;
+        }
+
+        .info {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+        .info div {
+            background: rgba(0, 255, 0, 0.1);
+            padding: 10px 20px;
+            border: 2px solid #00ff00;
+            border-radius: 5px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 30px;
+            font-size: 18px;
+            background: #00ff00;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: #00cc00;
+        }
+
+        .controls {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #aaa;
+        }
+    </style>
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>SPACE INVADERS</h1>
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+        <div class="info">
+            <div>Puntos: <span id="score">0</span></div>
+            <div>Vidas: <span id="lives"3></span></div>
+            <div>Nivel: <span id="level">1</span></div>
+        </div>
+        <button id="startBtn">Iniciar juego</button>
+        <div class="controls">
+            Controles: para mover ← → | Especio para disparar
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>

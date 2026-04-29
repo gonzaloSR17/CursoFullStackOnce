@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- boostrap icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+</head>
+<style>
+    :root {
+        --color-h1-personalizado: #0066cc
+    }
+
+    h1 {
+        color: var(--color-h1-personalizado) !important;
+    }
+</style>
+<body class=" my-2 flex-column min-vh-100 bg-light">
+
+    <!-- fixed-top me queda fijo en toda la pagina -->
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white fw-bold" href="#">Fundamentos Web</a>
+
+            <!-- boton hamburguesa -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse gap-3" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link text-white">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link text-secondary">Formulario</a>
+
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link text-secondary">Tablas</a>
+
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link text-secondary">Contactos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="p-4">
+        <div class="container mt-lg-5 mt-2 pt-4">
+            <div class="row align-items-center my-5">
+                <div class="col-lg-6 col-12 align-items-center">
+                    <h1 class="text-primary text-dark fw-bold display-4 mt-5 mb-3">Aprende Programación Web</h1>
+                    <p class="text-muted lead">Domina los fundamentos de HTML, CSS y JacaScript. este curso te enseñara
+                        desde cero como crear paginas wbs modernas y responsivas utilizando las mejores práticas de la
+                        industria. Aprenderas a estructurar documentos HTML, estilizar con CSS (incluyendo Boostrap) y
+                        añadir interactividad con Javascript</p>
+                </div>
+                <div class="col-lg-6 col-12">
+                    <img class="img-fluid rounded"
+                        src="https://blog.endeos.com/wp-content/uploads/2022/06/lenguajes-de-programacion-web.jpg"
+                        alt="imagen_html">
+                </div>
+            </div>
+
+            <div class="alert alert-warning fw-bold text-center d-node d-sm-block d-md-none border-warning mb-5"
+                role="alert">
+                USE UNA PANTALLA MATOR
+            </div>
+
+            <div class="card d-sm-none d-md-block mb-5 bg-white">
+
+                <div class="card-header bg-primary text-white fw-bold">
+                    <h5>Formulario de contactos</h5>
+                </div>
+                <div class="card-body">
+                    <form action="">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-6 mb-3">
+                                    <label for="nombre" class="form-label">Nombre</label>
+                                    <input type="text" id="nombre" name="nombre" class="form-control"
+                                        placeholder="Introduce tu nombre">
+                                </div>
+                                <div class="col-lg-6 mb-3">
+                                    <label for="apellido" class="form-label">Apellido</label>
+                                    <input type="text" id="apellido" name="apellido" class="form-control"
+                                        placeholder="Introduce tu apellido">
+                                </div>
+                                <div class="col-lg-6 mb-3">
+                                    <label for="email" class="form-label">email</label>
+                                    <input type="email" id="email" name="email" class="form-control"
+                                        placeholder="ejemplo@ejemplo.com">
+                                </div>
+                                <div class="col-lg-6 mb-3">
+                                    <label for="dni" class="form-label">DNI</label>
+                                    <input type="text" id="dni" name="dni" placeholder="123456789R"
+                                        class="form-control">
+                                </div>
+                                <div class="col-lg-6 mb-3">
+                                    <label for="telefono" class="form-label">Telefono</label>
+                                    <input type="number" id="telefono" name="telefono" placeholder="123456789"
+                                        class="form-control">
+                                </div>
+                                <div class="col-lg-6 mb-3">
+                                    <label for="date" class="form-label">Fecha de Nacimiento</label>
+                                    <input type="date" id="date" name="date" placeholder="dd/mm/yyyy"
+                                        class="form-control">
+                                </div>
+
+                                <div class="col-lg-6 mb-3">
+                                    <label for="edad" class="form-label">Edad</label>
+                                    <input type="number" id="edad" name="edad" placeholder="123456789R"
+                                        class="form-control">
+                                </div>
+
+                                <div class="col-lg-6 mb-3">
+
+                                    <div class="form-check">
+                                        <input type="radio" class="form-check-input">
+                                        <label for="flexRadio" class="form-check-label">Hombre</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" class="form-check-input">
+                                        <label for="flexRadio" class="form-check-label">Mujer</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" class="form-check-input">
+                                        <label for="flexRadio" class="form-check-label">Flamingo</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 mb-3">
+                                    <label for="direccion" class="form-label">Direccion</label>
+                                    <input type="text" id="direccion" name="direccion"
+                                        placeholder="Calle, numero, ciudad, codigo postal" class="form-control">
+                                </div>
+
+                                <div class="col-12 mb-3">
+                                    <label for="estudio" class="form-label">Nivel de estudios</label>
+                                    <select class="form-select" name="estudio" id="estudio">
+                                        <option value="informatica">informatica</option>
+                                        <option value="DAM">DAM</option>
+                                        <option value="DAW">DAW</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-12 mb-3">
+                                    <label for="skills" class="form-label">¿Tiene esperiencia previa en
+                                        programacion?</label> <br>
+                                    <label for="skills" class="form-label">HTML</label>
+                                    <input type="checkbox" id="skills" name="skills" class="form-checker"> <br>
+                                    <label for="skills" class="form-label">CSS</label>
+                                    <input type="checkbox" id="skills" name="skills" class="form-checker"> <br>
+                                    <label for="skills" class="form-label">JAVASCRIPT</label>
+                                    <input type="checkbox" id="skills" name="skills" class="form-checker"> <br>
+                                    <label for="skills" class="form-label">JAVA</label>
+                                    <input type="checkbox" id="skills" name="skills" class="form-checker">
+                                </div>
+
+                                <div class="col-12 mb-3">
+                                    <label for="textarea" class="form-label">mensaje o consulta</label>
+                                    <textarea name="textareaa" class="form-control" id="textareaa"
+                                        placeholder="Cuentanos....">
+
+                                    </textarea>
+                                </div>
+
+                                <div class="col-12 mb-3">
+                                    <input type="checkbox" class="form-checker" name="termino" id="termino">
+                                    <label for="termino" class="form-label">Acepto los terminos</label>
+                                </div>
+
+                                <div class="col-12 d-flex justify-content-end gap-3 mb-3">
+                                    <button class="btn btn-secundary" type="reset">Limpiar</button>
+                                    <button class="btn btn-primary" type="submit">Enviar Formulario</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
+            <div class="row align-items-start my-5 gap-5">
+                <div class="col-12 col-lg-6 bg-white card shadow-sm">
+                    <div class="card-body">
+                        <!-- table responsive (....) -->
+                        <div class="table-responsive">
+                            <caption class="caption-top">Horario de Clases del cursos</caption>
+                            <table class="table table-hover table-striped table-bordered">
+                                <thead class="table-dark">
+                                    <tr class="1">
+                                        <th class="1">Dia</th>
+                                        <th class="2">Hora</th>
+                                        <th class="3">Módulo</th>
+                                        <th class="4">Profesor</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="2">
+                                        <td class="1">Lunes</td>
+                                        <td class="2">10:00 - 12:00</td>
+                                        <td class="3">HTML Fundamentos</td>
+                                        <td class="4">Carlos García</td>
+                                    </tr>
+                                    <tr class="3">
+                                        <td class="1">Lunes</td>
+                                        <td class="2">12:30 - 14:30</td>
+                                        <td class="3">CSS Básico</td>
+                                        <td class="4">María Lopez</td>
+                                    </tr>
+                                    <tr class="4">
+                                        <td class="1">Martes</td>
+                                        <td class="2">10:00 - 12:00</td>
+                                        <td class="3">CSS Avanzado</td>
+                                        <td class="4">María Lopez</td>
+                                    </tr>
+                                    <tr class="5">
+                                        <td class="1">Martes</td>
+                                        <td class="2">12:30 - 14:30</td>
+                                        <td class="3">Boostrap</td>
+                                        <td class="4">Juan Mártinez</td>
+                                    </tr>
+                                    <tr class="6">
+                                        <td class="1">Miercoles</td>
+                                        <td class="2">10:00 - 12:00</td>
+                                        <td class="3">JacaScript Intro</td>
+                                        <td class="4">Ana Sánchez</td>
+                                    </tr>
+                                    <tr class="7">
+                                        <td class="1">Miercoles</td>
+                                        <td class="2">14.:30 - 16:00/td>
+                                        <td class="3">Joder a la gente</td>
+                                        <td class="4">Fulanito</td>
+                                    </tr>
+                                    <tr class="8">
+                                        <td class="1">Viernes</td>
+                                        <td class="2">18:00 - 20:00</td>
+                                        <td class="3">Imitar a un elefante</td>
+                                        <td class="4">Horton el elefante</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-12 col-lg-5 bg-white card shadow-sm">
+                    <div class="card-body">
+
+                        <!-- table responsive (....) -->
+                        <div class="table-responsive">
+                            <caption>Recursos del cursos</caption>
+                            <table class="table table-hover table-striped">
+                                <thead class="table-dark">
+                                    <tr class="1">
+                                        <th class="1">Dia</th>
+                                        <th class="2">Hora</th>
+                                        <th class="3">Módulo</th>
+                                        <th class="">Profesor</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="2">
+                                        <td class="1">Lunes</td>
+                                        <td class="2">10:00 - 12:00</td>
+                                        <td class="3">HTML Fundamentos</td>
+                                        <td class="text-success fw-bold">Carlos García</td>
+                                    </tr>
+                                    <tr class="3">
+                                        <td class="1">Lunes</td>
+                                        <td class="2">12:30 - 14:30</td>
+                                        <td class="3">CSS Básico</td>
+                                        <td class="text-success fw-bold">María Lopez</td>
+                                    </tr>
+                                    <tr class="4">
+                                        <td class="1">Martes</td>
+                                        <td class="2">10:00 - 12:00</td>
+                                        <td class="3">CSS Avanzado</td>
+                                        <td class="text-success fw-bold">María Lopez</td>
+                                    </tr>
+                                    <tr class="5">
+                                        <td class="1">Martes</td>
+                                        <td class="2">12:30 - 14:30</td>
+                                        <td class="3">Boostrap</td>
+                                        <td class="text-success fw-bold">Juan Mártinez</td>
+                                    </tr>
+                                    <tr class="6">
+                                        <td class="1">Miercoles</td>
+                                        <td class="2">10:00 - 12:00</td>
+                                        <td class="3">JacaScript Intro</td>
+                                        <td class="text-danger fw-bold">Ana Sánchez</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                
+            </div>
+        </div>
+    </main>
+
+    <!-- fixed-bottom me deja pegado en el footer -->
+    <footer class="footer bg-dark p-4 p-4 mt-auto fixed-bottom">
+        <h6 class="text-center text-white"><i class="bi bi-c-square"></i> 2024 Curso de fundamentos de Programacion Web.
+            Todos los derechos reservados
+        </h6>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

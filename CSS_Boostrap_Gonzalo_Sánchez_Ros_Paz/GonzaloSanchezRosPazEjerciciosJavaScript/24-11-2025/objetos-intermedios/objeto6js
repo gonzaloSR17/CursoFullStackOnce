@@ -1,0 +1,24 @@
+// Ejercicio 10
+// Crea dos objetos con propiedades diferentes y un tercero que sea la
+// combinacion de ambos. Si hay propiedades duplicadas, el segundo debe sobreescribir
+// al primero 
+
+const configuracionBase = {
+    tema: "oscuro",
+    idioma: "español",
+    notificaiones: true
+}
+
+const preferienciasUsuario = {
+    idioma: "ingles",
+    sonido: true,
+    fontSize: 15
+}
+
+
+// Spread Operatos - Funsion de objetos
+
+const objConvinados = {...configuracionBase, ...preferienciasUsuario, version: 3.0};
+
+// Y si quiero añadir una propiedad nueva... añado una prodiedad mas
+console.log(objConvinados)

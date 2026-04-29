@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<style>
+    .ejercicio {
+        margin-bottom: 60px;
+        padding: 30px;
+        background-color: #f8f9fa;
+        border-radius: 10px;
+    }
+
+    .ejercicio h2 {
+        color: #0d6efd;
+        margin-bottom: 20px;
+
+    }
+
+    .codigo-ejemplo {
+        background-color: #e9ecef;
+        padding: 15px;
+        border-radius: 5px;
+        margin-top: 20px;
+        font-family: monospace;
+    }
+</style>
+
+<body>
+
+    <!-- Contenedor principal de Bootsrap -->
+    <div class="container my-5">
+        <header class="text-center mb-5">
+            <h1 class="display-4">Ejercicio de imagenes responsive con boostrap></h1>
+            <p class="lead">10 ejercicios practicos para dominar el manejo de imagenes responsive</p>
+        </header>
+
+        <!-- EJERCICIO 1 (img-fluid) -->
+
+        <section class="ejercicio">
+            <h1>📸 Ejercicio 1: Imagen Responsive Básica (.img-fluid)</h1>
+            <p><strong>Objetivo:</strong> Aprender a hacer que una imagen se adapte automaticamente con el ancho de su
+                contenedor</p>
+            <img class="img-fluid" src="https://picsum.photos/800/400" alt="comic_mickey_mouse">
+
+            <div class="codigo-ejemplo">
+                <strong>Código usado:</strong><br>
+                &lt;img src=".... alt=... class="img-fluid"&gt;
+            </div>
+        </section>
+
+
+
+        <!-- EJERCICIO 2 Crear Miniatura -->
+
+        <section class="ejercicio">
+
+            <h2> 🖼️ Ejercicio 2: Imagen con Borde Thumbnail (.img-thumbnail)</h2>
+            <p><strong>Objetivo</strong> Crear una imagen con border redondeado y padding, estilo miniatura</p>
+            <!-- 
+        Clase: <img-thumbnail>- Añade margin 4px
+        añade borde de 1px color gris claro
+        Añade border-radius de 4px
+        tambien incluye max-widht: 100% (responsive) -->
+
+            <img src="comic3.jpg" alt="comic mickey" class="img-thumbnail img-fluid">
+
+            <div class="codigo-ejemplo">
+                <strong>Codigo usado:</strong><br>
+                &lt;img src=".... alt=... class="img-thumbnail"&gt;
+            </div>
+        </section>
+
+        <!-- ===================================== -->
+        <!-- EJERCICIO 3: Imagen Redondeada -->
+        <!-- ===================================== -->
+
+        <section class="ejercicio">
+
+            <h2> 🖼️ Ejercicio 3: Imagen con bordes redondeados</h2>
+            <p><strong>Objetivo</strong> Aplicar diferentes noveles de redondeo a las esquinas de las imagenes</p>
+            <!-- 
+        Clase: Rounded
+        - Aplica border-radius: 0.375 rem
+        Esquinas ligeramente redondeadas
+        -->
+
+            <div class="row g-4">
+                <div class="col-md-4">
+
+                    <img src="https://picsum.photos/id/20/300/300" alt="imagenes" class="img-fluid rounded">
+                </div>
+
+                <div class="col-md-4">
+
+                    <img src="https://picsum.photos/id/64/300/300" alt="imagenes" class="img-fluid rounded-circle">
+                </div>
+
+                <div class="col-md-4">
+
+                    <img src="comic4.jpg" alt="imagenes" class="img-fluid rounded-pill">
+                </div>
+            </div>
+            <div class="codigo-ejemplo">
+                <strong>Codigo usado:</strong><br>
+                &lt;img src=".... alt=... class="rounded"&gt;
+                &lt;img src=".... alt=... class="rounded-circle"&gt;
+                &lt;img src=".... alt=... class="rounded-pill"&gt;
+            </div>
+        </section>
+
+        <!-- ===================================== -->
+        <!-- EJERCICIO 4: Alineacion de imagenes -->
+        <!-- ===================================== -->
+
+        <section class="ejercicio">
+
+            <h2> 🖼️ Ejercicio 4: Alineacion de Imágenes (float y margin)</h2>
+            <p><strong>Objetivo</strong>Controlar la alineacion horizontal de las imagenes</p>
+            <!-- 
+        Clase: float-start (antes float-left)
+        - Hace que la imagen flote a la izquierda
+        - El rexto fluye alrededor por la derecha
+        -->
+
+            <img src="comic5.jpg" alt="comic-pato" class="img-thumbnail float-start me-3 mb-3">
+            <p>Esta imagen usa la clase <code>.float start</code> para flotar a la izquierda.
+                La clase <code>.me-3</code> añade margen a la derecha (margin-end) para separar export default class
+                texto de la imagen. El contenido de texto fluye naturalmente alrededor de la imagen
+            </p>
+
+            <div class="clearfix"></div>
+
+            <img src="https://picsum.photos/id/100/400/200" alt="Centrada"
+                class="img-thumbnail d-block mx-auto my-4 w-50 h-50">
+            <p class="text-center">Esta imagen está centrada con <code>.d-block .mx-auto</code></p>
+
+            <div class="codigo-ejemplo">
+                <strong>Codigo usado:</strong><br>
+                <p>&lt;img src=".... alt=... class="float-start me-3"&gt;</p><br>
+                <p>&lt;img src=".... alt=... class="d-block mx-auto"&gt;</p>
+
+            </div>
+        </section>
+
+        <!-- ===================================== -->
+        <!-- EJERCICIO 6: Control ancho por Breakpoint -->
+        <!-- ===================================== -->
+
+        <section class="ejercicio">
+
+            <h2> 🖼️ Ejercicio 6: Control ancho por Breakpoint</h2>
+            <p><strong>Objetivo: </strong>Controla el ancho de las imagenes segun el tamaño de pantalla</p>
+            <!-- 
+        Sistema de columna s responsive
+        - col-12: ocupa todo el ancho en moviles (100%)
+        -col-md-6: ocupa 6 de 12 columnas en tablets (50%)
+        - col-lg-4: ocupa 4 de 12 columnas en desktop (33.33%)
+        
+        Breakpoints
+        - sm: > 576px;
+        - md: > 768px;
+        - lg: > 992px;
+        - xl: > 1200px;
+        - xxl: > 1400px;
+        -->
+
+            <div class="row g-3">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <img class="img-fluid rounded" src="comic7.jpg" alt="portada_marvel_1">
+                    <p class="text-center mt-2">100% movil | 50 tablet | 33% desktop</p>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <img class="img-fluid rounded" src="comic8.jpg" alt="portada_marvel_1">
+                    <p class="text-center mt-2">100% movil | 50 tablet | 33% desktop</p>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <img class="img-fluid rounded" src="comic9.jpg" alt="portada_marvel_1">
+                    <p class="text-center mt-2">100% movil | 50 tablet | 33% desktop</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================================== -->
+        <!-- EJERCICIO 7: FIGCAPTION imagenes responsive -->
+        <!-- ===================================== -->
+
+        <section class="ejercicio">
+
+            <h2> 🖼️ Ejercicio 7: Imagen Responsive figcaption</h2>
+            <p><strong>Objetivo: </strong>Controla el ancho de las imagenes segun el tamaño de pantalla</p>
+            <!-- 
+        -->
+
+            <figure class="figure">
+                <img src="comic10.jpg" class="figure-img img-fluid rounded w-50 h-50" alt="mortadelo y filemon">
+                <figcaption class="figure-caption">Comic de mortadelo y filemon</figcaption>
+            </figure>
+
+            <div class="codigo-ejemplo">
+                <strong>Código usado:</strong><br>
+            </div>
+        </section>
+
+        <!-- ===================================== -->
+        <!-- EJERCICIO 8: Tarjeta con imagenes -->
+        <!-- ===================================== -->
+
+        <section class="ejercicio">
+
+            <h2> 🖼️ Ejercicio 7: Imagen Responsive figcaption</h2>
+            <p><strong>Objetivo: </strong>Integrar imagenes dento de componentes card de Boostrap</p>
+
+            <!-- Componentes Card:
+        - card: contenedor principal
+        - card-img-top: imagen en la parte superior (widht 100%, esquinas superiores redondeadas)
+        - card-body: contenedor para el contenido
+        - card-body: contenedor para el contenido- card-title y card-text: estilos para tiutulos y texto -->
+
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <div class="card h-12 w-12">
+                        <img src="comic11.png"  alt="comic_2" class="card-img-top h-12 w-12">
+                        <div class="card-body">
+                            <h5 class="card-title">Imagen Superior</h5>
+                            <p class="card-text">La clase <code>.card-img-top</code> coloca la imagen en la parte
+                                superior de la card con esquinas redondeadas</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-body">Imagen inferior</h5>
+                            <p class="card-text">La clase <code>.card-img-top</code> coloca la imagen en la parte
+                                superior de la card con esquinas redondeadas</p>
+                        </div>
+                        <img src="comic12.png" alt="mortadelo&filemon" class="card-img-bottom h-12 w-12">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+            <!-- ========================================
+             EJERCICIO 10: Galería Completa Responsive
+             ======================================== -->
+        <section class="ejercicio">
+            <h2>🎨 Ejercicio 10: Galería Completa Responsive (Proyecto Integrador)</h2>
+            <p><strong>Objetivo:</strong> Crear una galería profesional combinando todas las técnicas aprendidas.</p>
+            
+            <!-- 
+                Este ejercicio integra:
+                - Sistema de grid responsive
+                - Imágenes con ratio
+                - Cards
+                - Clases de espaciado y bordes
+                - Adaptación a diferentes tamaños de pantalla
+            -->
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3">
+                <!-- 
+                    row-cols-*: define cuántas columnas por fila en cada breakpoint
+                    - row-cols-1: 1 columna en móvil
+                    - row-cols-sm-2: 2 columnas en pantallas pequeñas
+                    - row-cols-md-3: 3 columnas en tablets
+                    - row-cols-lg-4: 4 columnas en desktop
+                -->
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <div class="ratio ratio-1x1">
+                            <img src="https://picsum.photos/id/90/400/400" 
+                                 alt="Galería 1" 
+                                 style="object-fit: cover;">
+                        </div>
+                        <div class="card-body p-2">
+                            <p class="card-text small mb-0">Imagen 1</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <div class="ratio ratio-1x1">
+                            <img src="https://picsum.photos/id/91/400/400" 
+                                 alt="Galería 2" 
+                                 style="object-fit: cover;">
+                        </div>
+                        <div class="card-body p-2">
+                            <p class="card-text small mb-0">Imagen 2</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <div class="ratio ratio-1x1">
+                            <img src="https://picsum.photos/id/92/400/400" 
+                                 alt="Galería 3" 
+                                 style="object-fit: cover;">
+                        </div>
+                        <div class="card-body p-2">
+                            <p class="card-text small mb-0">Imagen 3</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <div class="ratio ratio-1x1">
+                            <img src="https://picsum.photos/id/93/400/400" 
+                                 alt="Galería 4" 
+                                 style="object-fit: cover;">
+                        </div>
+                        <div class="card-body p-2">
+                            <p class="card-text small mb-0">Imagen 4</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <div class="ratio ratio-1x1">
+                            <img src="https://picsum.photos/id/94/400/400" 
+                                 alt="Galería 5" 
+                                 style="object-fit: cover;">
+                        </div>
+                        <div class="card-body p-2">
+                            <p class="card-text small mb-0">Imagen 5</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <div class="ratio ratio-1x1">
+                            <img src="https://picsum.photos/id/95/400/400" 
+                                 alt="Galería 6" 
+                                 style="object-fit: cover;">
+                        </div>
+                        <div class="card-body p-2">
+                            <p class="card-text small mb-0">Imagen 6</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <div class="ratio ratio-1x1">
+                            <img src="https://picsum.photos/id/96/400/400" 
+                                 alt="Galería 7" 
+                                 style="object-fit: cover;">
+                        </div>
+                        <div class="card-body p-2">
+                            <p class="card-text small mb-0">Imagen 7</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <div class="ratio ratio-1x1">
+                            <img src="https://picsum.photos/id/97/400/400" 
+                                 alt="Galería 8" 
+                                 style="object-fit: cover;">
+                        </div>
+                        <div class="card-body p-2">
+                            <p class="card-text small mb-0">Imagen 8</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="codigo-ejemplo mt-4">
+                <strong>Código usado:</strong><br>
+                &lt;div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3"&gt;<br>
+                &nbsp;&nbsp;&lt;div class="col"&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="card h-100"&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="ratio ratio-1x1"&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="..." style="object-fit: cover;"&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+                &nbsp;&nbsp;&lt;/div&gt;<br>
+                &lt;/div&gt;
+            </div>
+            <p class="mt-3"><em>💡 Tip: h-100 hace que todas las cards tengan la misma altura, y shadow-sm añade una sombra sutil.</em></p>
+        </section>
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

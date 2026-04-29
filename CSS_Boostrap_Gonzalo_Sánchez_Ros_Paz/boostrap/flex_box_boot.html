@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<style>
+    .ejemplo-item {
+        background-color: #e9ecef;
+        border: 2px solid #6c757d;
+        padding: 20px;
+        margin: 5px;
+    }
+
+
+    .contenedor-ejemplo {
+        background-color: #f8f9fa;
+        border: 3px dashed #0d6efd;
+        min-height: 150px;
+        margin-bottom: 30px;
+    }
+</style>
+
+<body>
+
+    my-5: margin Vertica top y button de tamaño 5 3rem =
+
+    <div class="container my-5 py-5">
+
+        <h1 class="text-center mb-5">Fundamwntos completos de Flexbox en Bootstrap 5</h1>
+
+        <!-- Ejercicio 1  -->
+
+        <section class="border-rounded p-4 mb-5 bg-light">
+            <h2 class="text-primary mb-3 border-bottom  pb-2">1. Activa Fleckboch</h1>
+
+                <!-- d-flex: Display flex - activas el modelo de caja flexible en el elementos
+                Este es el punto de partida para usa el flexbock -->
+
+                <h3 class="mb-4">d-Flex: Activa la caja flexible</h3>
+                <div class="d-flex contenedor-ejemplo">
+                    <div class="ejemplo-item">ITEM 1</div>
+                    <div class="ejemplo-item">ITEM 2</div>
+                    <div class="ejemplo-item">ITEM 3</div>
+                </div>
+
+                <!-- d-inline-flex = El eontendor ocupa solo el ancho necesario para su contenido, no toda la linea -->
+
+                <h3 class="mb-4">d-inline-flex: Flex container en linea</h3>
+                <div class="d-inline-flex contenedor-ejemplo">
+                    <div class="ejemplo-item">ITEM 1</div>
+                    <div class="ejemplo-item">ITEM 2</div>
+                </div>
+
+        </section>
+
+        <!-- Ejercicio 2 -->
+
+        <section class="border-rounded p-4 mb-5 bg-light">
+            <h2 class="text-primary mb-3 border-bottom  pb-2">2. Columna horizontal y vertical</h1>
+
+                <!-- flex-row: Los elementos hijos se colocan en fila horizontal, de izquiweda a derecha -->
+
+                <h3 class="mb-4">Flex-row: horizontal normal</h3>
+                <div class="d-flex flex-row contenedor-ejemplo">
+                    <div class="ejemplo-item">ITEM 1</div>
+                    <div class="ejemplo-item">ITEM 2</div>
+                    <div class="ejemplo-item">ITEM 3</div>
+                </div>
+
+                <!-- flex-row-reverse: Los elementos se colocan en fila pero de derecha a izquierda
+                invierte el orden visual de los elementos -->
+
+                <h3 class="mb-4">flex-row-reverse: Horizontal inverida</h3>
+                <div class="d-flex flex-row-reverse contenedor-ejemplo">
+                    <div class="ejemplo-item">ITEM 1</div>
+                    <div class="ejemplo-item">ITEM 2</div>
+                    <div class="ejemplo-item">ITEM 3</div>
+                </div>
+
+                <!-- flex-columm los elemntos hijo s se apilan vericalmente de arriba hacia abajo
+                cambia el eje principal a vertical -->
+                <h3 class="mb-4">flex-column: Direccion vertical</h3>
+                <div class="d-flex flex-column contenedor-ejemplo">
+                    <div class="ejemplo-item">ITEM 1</div>
+                    <div class="ejemplo-item">ITEM 2</div>
+                    <div class="ejemplo-item">ITEM 3</div>
+                </div>
+
+                <h3 class="mb-4">flex-column-reverse: Columna vertical invertida</h3>
+                <div class="d-flex flex-column-reverse contenedor-ejemplo">
+                    <div class="ejemplo-item">ITEM 1</div>
+                    <div class="ejemplo-item">ITEM 2</div>
+                    <div class="ejemplo-item">ITEM 3</div>
+                </div>
+
+        </section>
+
+        <!-- Ejercicio 3 -->
+
+        <section class="border-rounded p-4 mb-5 bg-light">
+            <h2 class="text-primary mb-3 border-bottom  pb-2">3. Alineacion en el eje principal (justify-content)</h1>
+
+                <!-- d-flex: Display flex - activas el modelo de caja flexible en el elementos
+                Este es el punto de partida para usa el flexbock -->
+
+                <h3 class="mb-4">justify-content-start: Alinear al inicio</h3>
+                <div class="d-flex justify-content-start contenedor-ejemplo">
+                    <div class="ejemplo-item">ITEM 1</div>
+                    <div class="ejemplo-item">ITEM 2</div>
+                    <div class="ejemplo-item">ITEM 3</div>
+                </div>
+
+                <h3 class="mb-4">justify-content-end: Alinear al final</h3>
+                <div class="d-flex justify-content-end contenedor-ejemplo">
+                    <div class="ejemplo-item">ITEM 1</div>
+                    <div class="ejemplo-item">ITEM 2</div>
+                    <div class="ejemplo-item">ITEM 3</div>
+                </div>
+
+                <!-- d-inline-flex = El eontendor ocupa solo el ancho necesario para su contenido, no toda la linea -->
+
+                <h3 class="mb-4">justify-content-between: Espacios entre elemento</h3>
+                <div class="d-flex justify-content-between contenedor-ejemplo">
+                    <div class="ejemplo-item">ITEM 1</div>
+                    <div class="ejemplo-item">ITEM 2</div>
+                </div>
+
+                <h3 class="mb-4">justify-content-around: Espacios alrededor de elemento</h3>
+                <div class="d-flex justify-content-around contenedor-ejemplo">
+                    <div class="ejemplo-item">ITEM 1</div>
+                    <div class="ejemplo-item">ITEM 2</div>
+                    <div class="ejemplo-item">ITEM 3</div>
+                </div>
+
+        </section>
+
+        <!-- Ejercicio 4 -->
+
+        <section class="border-rounded p-4 mb-5 bg-light">
+            <h2 class="text-primary mb-3 border-bottom  pb-2">4.-Alineacion en el eje transversal</h1>
+
+                <!-- d-flex: Display flex - activas el modelo de caja flexible en el elementos
+                Este es el punto de partida para usa el flexbock -->
+
+                <h3 class="mb-4">align items-start: Alinear al inicio</h3>
+                <div class="d-flex align-items-start contenedor-ejemplo">
+                    <div class="ejemplo-item">item alto</div>
+                    <div class="ejemplo-item">item <br>con <br>mas <br>contenido</div>
+                    <div class="ejemplo-item">ITEM</div>
+                </div>
+
+                <!-- d-inline-flex = El eontendor ocupa solo el ancho necesario para su contenido, no toda la linea -->
+
+                <h3 class="mb-4">align items end: alinear al final</h3>
+                <div class="d-flex align-items-end contenedor-ejemplo">
+                    <div class="ejemplo-item">item alto</div>
+                    <div class="ejemplo-item">item <br>con <br>mas <br>contenido</div>
+                    <div class="ejemplo-item">ITEM</div>
+                </div>
+
+                <h3 class="mb-4">align-item-center-centrar-verticalmente</h3>
+                <div class="d-flex align-items-center contenedor-ejemplo">
+                    <div class="ejemplo-item">item alto</div>
+                    <div class="ejemplo-item">item <br>con <br>mas <br>contenido</div>
+                    <div class="ejemplo-item">ITEM</div>
+                </div>
+
+                <h3 class="mb-4">align-item-baseline Alinear por linea base del texto</h3>
+                <div class="d-flex align-items-baseline contenedor-ejemplo">
+                    <div class="ejemplo-item">item alto</div>
+                    <div class="ejemplo-item" style="font-size: 2rem;">Grande</div>
+                    <div class="ejemplo-item">ITEM</div>
+                </div>
+
+                <h3 class="mb-4">align-item-stretch: Estirar (por defecto)</h3>
+                <div class="d-flex align-item-stretch contenedor-ejemplo">
+                    <div class="ejemplo-item">1</div>
+                    <div class="ejemplo-item">2</div>
+                    <div class="ejemplo-item">3</div>
+                </div>
+
+        </section>
+
+        <!-- Ejercicio 5 -->
+
+        <section class="border-rounded p-4 mb-5 bg-light">
+            <h2 class="text-primary mb-3 border-bottom  pb-2">5. Alineacion individual</h1>
+
+                <!-- d-flex: Display flex - activas el modelo de caja flexible en el elementos
+                Este es el punto de partida para usa el flexbock -->
+
+                <h3 class="mb-4">d-Flex: Activa la caja flexible</h3>
+                <div class="d-flex align-items-start contenedor-ejemplo" style="height: 200px;">
+                    <div class="ejemplo-item align-self-start">align-self-start</div>
+                    <div class="ejemplo-item align-self-center">align-self-center</div>
+                    <div class="ejemplo-item align-self-end">align-self-end</div>
+                    <div class="ejemplo-item align-self-stretch">align-self-stretch</div>
+                    <div class="ejemplo-item align-self-baseline">align-self-baseline</div>
+                </div>
+
+                <!-- d-inline-flex = El eontendor ocupa solo el ancho necesario para su contenido, no toda la linea -->
+
+                <h3 class="mb-4">d-inline-flex: Flex container en linea</h3>
+                <div class="d-inline-flex contenedor-ejemplo">
+                    <div class="ejemplo-item">ITEM 1</div>
+                    <div class="ejemplo-item">ITEM 2</div>
+                </div>
+
+        </section>
+
+        <!-- Ejercicio 6 -->
+
+        <section class="border-rounded p-4 mb-5 bg-light">
+            <h2 class="text-primary mb-3 border-bottom  pb-2">6. envoltura de elementos (flex-wrap)</h1>
+
+                <!-- d-flex: Display flex - activas el modelo de caja flexible en el elementos
+                Este es el punto de partida para usa el flexbock -->
+
+                <h3 class="mb-4">flex-nowrap Sin envoltura por defecto (se sobresale) </h3>
+                <div class="d-flex flex-nowrap contenedor-ejemplo" style="height: 200px;">
+                    <div class="ejemplo-item">Item 1</div>
+                    <div class="ejemplo-item">Item 2</div>
+                    <div class="ejemplo-item">Item 3</div>
+                    <div class="ejemplo-item">Item 4</div>
+                    <div class="ejemplo-item">Item 5</div>
+                    <div class="ejemplo-item">Item 6</div>
+                </div>
+
+                <!-- d-inline-flex = El eontendor ocupa solo el ancho necesario para su contenido, no toda la linea -->
+
+                <h3 class="mb-4">flex-wrap Se envuelve (La fila d-flex-containers todos se baja a la siguiente linea si
+                    ) </h3>
+                <div class="d-flex flex-wrap contenedor-ejemplo" style="height: 200px;">
+                    <div class="ejemplo-item">Item 1</div>
+                    <div class="ejemplo-item">Item 2</div>
+                    <div class="ejemplo-item">Item 3</div>
+                    <div class="ejemplo-item">Item 4</div>
+                    <div class="ejemplo-item">Item 5</div>
+                    <div class="ejemplo-item">Item 6</div>
+                </div>
+
+                <h3 class="mb-4">flex-wrap-reverse lo mismo que el anterior pero al reves</h3>
+                <div class="d-flex flex-wrap-reverse contenedor-ejemplo" style="height: 200px;">
+                    <div class="ejemplo-item">Item 1</div>
+                    <div class="ejemplo-item">Item 2</div>
+                    <div class="ejemplo-item">Item 3</div>
+                    <div class="ejemplo-item">Item 4</div>
+                    <div class="ejemplo-item">Item 5</div>
+                    <div class="ejemplo-item">Item 6</div>
+                </div>
+
+        </section>
+
+        <!-- Ejercicio 7 -->
+
+        <section class="border-rounded p-4 mb-5 bg-light">
+            <h2 class="text-primary mb-3 border-bottom  pb-2">7. Alineacion de lineas multiples</h1>
+
+                <!-- d-flex: Display flex - activas el modelo de caja flexible en el elementos
+                Este es el punto de partida para usa el flexbock -->
+
+                <h3 class="mb-4">d-Flex: Activa la caja flexible</h3>
+                <div class="d-flex flex-wrap align-content-start contenedor-ejemplo" style="height: 300px;">
+                    <div class="ejemplo-item">ITEM 1</div>
+                    <div class="ejemplo-item">ITEM 2</div>
+                    <div class="ejemplo-item">ITEM 3</div>
+                    <div class="ejemplo-item">ITEM 4</div>
+                    <div class="ejemplo-item">ITEM 5</div>
+
+                </div>
+
+                <!-- d-inline-flex = El eontendor ocupa solo el ancho necesario para su contenido, no toda la linea -->
+
+                <h3 class="mb-4">align-content-end: Lineas fianl</h3>
+                <div class="d-flex flex-wrap align-content-end contenedor-ejemplo" style="height: 300px;">
+                    <div class="ejemplo-item">ITEM 1</div>
+                    <div class="ejemplo-item">ITEM 2</div>
+                    <div class="ejemplo-item">ITEM 3</div>
+                    <div class="ejemplo-item">ITEM 4</div>
+                    <div class="ejemplo-item">ITEM 5</div>
+                </div>
+
+                <h3 class="mb-4">align-content-center: Lineas centradas</h3>
+                <div class="d-flex flex-wrap align-content-center contenedor-ejemplo" style="height: 300px;">
+                    <div class="ejemplo-item">ITEM 1</div>
+                    <div class="ejemplo-item">ITEM 2</div>
+                    <div class="ejemplo-item">ITEM 3</div>
+                    <div class="ejemplo-item">ITEM 4</div>
+                    <div class="ejemplo-item">ITEM 5</div>
+                </div>
+
+                <h3 class="mb-4">align-content-between: Lineas centradas</h3>
+                <div class="d-flex flex-wrap align-content-between contenedor-ejemplo" style="height: 300px;">
+                    <div class="ejemplo-item">ITEM 1</div>
+                    <div class="ejemplo-item">ITEM 2</div>
+                    <div class="ejemplo-item">ITEM 3</div>
+                    <div class="ejemplo-item">ITEM 4</div>
+                    <div class="ejemplo-item">ITEM 5</div>
+                </div>
+
+                <h3 class="mb-4">align-content-around: Espaciado alrededor de líneas como between pero con my</h3>
+                <div class="d-flex flex-wrap align-content-around contenedor-ejemplo" style="height: 300px;">
+                    <div class="ejemplo-item">ITEM 1</div>
+                    <div class="ejemplo-item">ITEM 2</div>
+                    <div class="ejemplo-item">ITEM 3</div>
+                    <div class="ejemplo-item">ITEM 4</div>
+                    <div class="ejemplo-item">ITEM 5</div>
+                </div>
+
+                <h3 class="mb-4">align-content-stretch: Espaciado alrededor de líneas como between pero con my</h3>
+                <div class="d-flex flex-wrap align-content-around contenedor-ejemplo" style="height: 300px;">
+                    <div class="ejemplo-item">ITEM 1</div>
+                    <div class="ejemplo-item">ITEM 2</div>
+                    <div class="ejemplo-item">ITEM 3</div>
+                    <div class="ejemplo-item">ITEM 4</div>
+                    <div class="ejemplo-item">ITEM 5</div>
+                </div>
+
+
+
+        </section>
+
+
+        <section class="border-rounded p-4 mb-5 bg-light">
+            <h2 class="text-primary mb-3 border-bottom  pb-2">8. Crecimiento y Reucción de elementos</h1>
+
+                <!-- d-flex: Display flex - activas el modelo de caja flexible en el elementos
+                Este es el punto de partida para usa el flexbock -->
+
+                <h3 class="mb-4">flex-grow-*: Capacidad de crecer</h3>
+                <!-- flex-grow-0 no rellenara el contenedor-ejemplo -->
+                <!-- pero con flex-grow-1 rellenara todo lo albarcable del contenedor -->
+                <div class="d-flex contenedor-ejemplo">
+                    <div class="ejemplo-item flex-grow-0">ITEM 1</div>
+                    <div class="ejemplo-item flex-grow-1">ITEM 2</div>
+                </div>
+
+                <!-- d-inline-flex = El eontendor ocupa solo el ancho necesario para su contenido, no toda la linea -->
+
+                <h3 class="mb-4">flex-shrink-*: Capacidad de esconger</h3>
+                <div class="d-inline-flex contenedor-ejemplo">
+                    <div class="ejemplo-item flex-shrink-0">No se encoge (flex-shrink-0)</div>
+                    <div class="ejemplo-item flex-shrink-1">Se encoge (flex-shrink-1)</div>
+                    <div class="ejemplo-item flex-shrink-1">Se encoge (flex-shrink-1)</div>
+                </div>
+
+                <h3 class="mb-4">flex-fill-*: Llenar espacio disponible</h3>
+                <div class="d-inline-flex contenedor-ejemplo">
+                    <div class="ejemplo-item flex-fill">(flex-fill 1)</div>
+                    <div class="ejemplo-item flex-fill">(flex-fill 2)</div>
+                    <div class="ejemplo-item flex-fill">(flex-fill 3)</div>
+                </div>
+
+
+        </section>
+
+        <!-- Ejercicio 1  -->
+
+        <section class="border-rounded p-4 mb-5 bg-light">
+            <h2 class="text-primary mb-3 border-bottom  pb-2">9. Orden de los Elementos (order)</h1>
+                <p></p>
+                <!-- d-flex: Display flex - activas el modelo de caja flexible en el elementos
+                Este es el punto de partida para usa el flexbock -->
+
+                <h3 class="mb-4">d-Flex: Activa la caja flexible</h3>
+                <div class="d-flex contenedor-ejemplo">
+                    <div class="ejemplo-item order-2">HTML: Primero (order-2)</div>
+                    <div class="ejemplo-item order-1">HTML: Segundo (order-1)</div>
+                    <div class="ejemplo-item order-3">HTML: Tercero (order-3)</div>
+                </div>
+        </section>
+
+        <section class="border-rounded p-4 mb-5 bg-light">
+            <h2 class="text-primary mb-3 border-bottom  pb-2">10. Espaciado entre elementos (gap)</h1>
+                <p></p>
+                <!-- d-flex: Display flex - activas el modelo de caja flexible en el elementos
+                Este es el punto de partida para usa el flexbock -->
+
+                <h3 class="mb-4">gap-* Espacio entre columnas</h3>
+                <div class="d-flex flex-wrap gap-3 contenedor-ejemplo">
+                    <div class="ejemplo-item order-2">HTML: Primero (order-2)</div>
+                    <div class="ejemplo-item order-1">HTML: Segundo (order-1)</div>
+                    <div class="ejemplo-item order-3">HTML: Tercero (order-3)</div>
+                </div>
+
+                <h3 class="mb-4">row-gap-*: Espacio vertical entre filas</h3>
+                <div class="d-flex flex-wrap row-gap-4 contenedor-ejemplo">
+                    <div class="ejemplo-item order-2">HTML: Primero (order-2)</div>
+                    <div class="ejemplo-item order-1">HTML: Segundo (order-1)</div>
+                    <div class="ejemplo-item order-3">HTML: Tercero (order-3)</div>
+                </div>
+
+                <h3 class="mb-4">column-gap-*: Espacio de columnas</h3>
+                <div class="d-flex flex-wrap row-gap-4 contenedor-ejemplo">
+                    <div class="ejemplo-item order-2">HTML: Primero (order-2)</div>
+                    <div class="ejemplo-item order-1">HTML: Segundo (order-1)</div>
+                    <div class="ejemplo-item order-3">HTML: Tercero (order-3)</div>
+                </div>
+
+
+        </section>
+
+        <section class="border-rounded p-4 mb-5 bg-light">
+            <h2 class="text-primary mb-3 border-bottom  pb-2">11. Clases Responsivas</h1>
+                <p class="mb-4">Todas las clases flex se pueden aplicar en diferenters breakpoints:</p>
+                <div class="mb-3 contenedor-ejemplo">
+                    <!-- d-flex flex en movil
+                     flex-column: columna en movil
+                     flex-md-row: FIla desde tablet (768px) en adelante -->
+                    <!-- justify-content-md-between: Distribuir espacio desde tablet en adelante -->
+
+                    <div class="d-flex flex-columm flex-md-row justify-content-md-between">
+                        <div class="ejemplo-item">HTML: Primero (order-2)</div>
+                        <div class="ejemplo-item">HTML: Segundo (order-1)</div>
+                        <div class="ejemplo-item">HTML: Tercero (order-3)</div>
+                    </div>
+                </div>
+        </section>
+
+        <section class="border-rounded p-4 mb-5 bg-light">
+            <h2 class="text-primary mb-3 border-bottom  pb-2">11. Clases Responsivas</h1>
+                <p class="mb-4">Todas las clases flex se pueden aplicar en diferenters breakpoints:</p>
+                <div class="mb-3 contenedor-ejemplo">
+                    <!-- d-flex flex en movil
+                     flex-column: columna en movil
+                     flex-md-row: FIla desde tablet (768px) en adelante -->
+                    <!-- justify-content-md-between: Distribuir espacio desde tablet en adelante -->
+
+                    <div class="d-flex flex-columm flex-md-row justify-content-md-between">
+                        <div class="ejemplo-item">HTML: Primero (order-2)</div>
+                        <div class="ejemplo-item">HTML: Segundo (order-1)</div>
+                        <div class="ejemplo-item">HTML: Tercero (order-3)</div>
+                    </div>
+                </div>
+        </section>
+
+        <section class="border-rounded p-4 mb-5 bg-light">
+
+            <div class="d-flex flex-column border rounded shadow p-4">
+                <!-- Header -->
+                <div class="d-flex justify-content-between align-items-center mb-3 pb-3 border-bottom">
+                    <h3 class="m-0">Título de Tarjeta</h3>
+                    <button class="btn btn-primary">Acción</button>
+                </div>
+
+                <!-- Body -->
+                <div class="flex-grow-1 mb-3">
+                    <p>njedsvnjkdcbnkjnckjb njdfnv jdfj vj dfkjzk dkjb dfbj dfj jvcmbndk</p>
+                </div>
+
+                <!-- Footer -->
+                <div class="d-flex gap-2 justify-content-end">
+                    <button class="btn btn-outline-secondary">Cancelar</button>
+                    <button class="btn btn-primary">Aceptar</button>
+                </div>
+            </div>
+
+
+        </section>
+
+        <section class="contenedor-ejemplo">
+            <div class="ejemplo-item">
+
+            </div>
+        </section>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous"></script>
+
+        <!-- <div class="contenedor-ejemplo">
+        <div class="ejemplo-item">
+
+        </div>
+    </div> -->
+</body>
+
+</html>

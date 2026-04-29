@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+        background-color: rgb(110, 110, 255);
+    }
+
+    h1 {
+        background-color: rgb(137, 137, 252);
+        text-align: center;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 50px;
+        border-radius: 90px;
+        color: white;
+    }
+</style>
+
+<body>
+
+    <h1> Gonzalo Sánchez-Ros Paz - PSEUDOCODIGO</h1>
+
+    <!-- Menu contenedor -->
+
+    <!-- El articulo -->
+
+    <p>Prueba los siguientes links veras como cambian de color</p>
+
+    <ul>
+        <li><a href="www.youtube.com">Visitar Youtube</a></li>
+        <li><a href="www.wikipedia.org">Visitar wikipedia</a></li>
+        <li><a href="www.gonzalo.com">Visitar mi portfolio</a></li>
+
+    </ul>
+
+    <!-- Divide en 2 contenedores para que pueda ver el código -->
+
+    <div class="container">
+
+        <div id="html-code">
+
+            <p class="code-title">Código HTML</p>
+
+            <p class="code-text">
+                &lt;ul&gt; <br><br>
+                &lt;li&gt;&lt;a href="www.youtube.com"&gt;Visitar Youtube&lt;/a&gt;&lt;/li&gt; <br>
+                &lt;li&gt;&lt;a href="www.wikipedia.org"&gt;Visitar Wikipedia&lt;/a&gt;&lt;/li&gt; <br>
+                &lt;li&gt;&lt;a href="www.gonzalo.com"&gt;Visitar mi portfolio&lt;/a&gt;&lt;/li&gt; <br><br>
+                &lt;/ul&gt; <br>
+            </p>
+
+        </div>
+
+
+        <div id="css-code">
+            <p class="code-title">Código CSS</p>
+            <p class="code-text">
+                /* Esto son pseudocodigos */ <br><br>
+
+                /* Link no visitado */ <br>
+                a:link { <br>
+                &nbsp;&nbsp;color: white; <br>
+                } <br><br>
+
+                p { <br>
+                &nbsp;&nbsp;font-family: fantasy; <br>
+                &nbsp;&nbsp;color: white; <br>
+                &nbsp;&nbsp;font-size: 20px; <br>
+                } <br><br>
+
+                /* Link visitado */ <br>
+                a:visited { <br>
+                &nbsp;&nbsp;color: rgb(131, 131, 131); <br>
+                } <br><br>
+
+                /* Link si pasas el ratón por encima */ <br>
+                a:hover { <br>
+                &nbsp;&nbsp;color: rgb(255, 121, 208); <br>
+                &nbsp;&nbsp;font-size: 20px; <br>
+                } <br><br>
+
+                /* link si lo activas */ <br>
+                a:active { <br>
+                &nbsp;&nbsp;color: #0000FF; <br>
+                }
+            </p>
+
+        </div>
+    </div>
+
+    <p>Demo de pseudocodigo con form...</p>
+
+    <form action="">
+        <label for="">Nombre de usuario</label>
+        <input type="text" id="iusu" required>
+
+        <label for="">Correo Electronico</label>
+        <input type="email" id="igmail" required>
+
+        <label for="">Contraseña</label>
+        <input type="password" id="ipassword">
+    </form>
+
+    <p></p>
+
+    <div class="container">
+        <div id="html-code">
+            <p class="code-title">Código HTML</p>
+
+            <p class="code-text">
+                &lt;form action=&quot;&quot;&gt;<br>
+                  &lt;label for=&quot;&quot;&gt;Nombre de usuario&lt;/label&gt;&lt;br&gt;<br>
+                  &lt;input type=&quot;text&quot; id=&quot;iusu&quot; required&gt;&lt;br&gt;<br><br>
+
+                  &lt;label for=&quot;&quot;&gt;Correo Electrónico&lt;/label&gt;&lt;br&gt;<br>
+                  &lt;input type=&quot;email&quot; id=&quot;igmail&quot; required&gt;&lt;br&gt;<br><br>
+
+                  &lt;label for=&quot;&quot;&gt;Contraseña&lt;/label&gt;&lt;br&gt;<br>
+                  &lt;input type=&quot;password&quot; id=&quot;ipassword&quot;&gt;&lt;br&gt;<br>
+                &lt;/form&gt;
+            </p>
+        </div>
+
+        <div id="css-code">
+
+            <p class="code-title">Codigo CSS</p>
+            <p class="code-text">
+                <br>
+                /* Pseudocódigo para input */ <br><br>
+
+                /* Si es opcional ponte este color */ <br>
+                input:optional { <br>
+                &nbsp;&nbsp;background-color: lightgreen; <br>
+                } <br><br>
+
+                /* Si es obligatorio */ <br>
+                input:required { <br>
+                &nbsp;&nbsp;background-color: rgba(255, 0, 0, 0.396); <br>
+                &nbsp;&nbsp;border-color: rgba(255, 0, 0, 0.362); <br>
+                }
+                <br>
+            </p>
+
+        </div>
+
+    </div>
+
+    <h1>EJERCICIO PSEUDOCLASES CSS</h1>
+
+    <!-- tarjeta de phyton -->
+
+    <!-- Cotnedor principal de galeria -->
+    <div class="galeria">
+
+        <!-- TARJETA 1: phyton -->
+        <div class="tarjeta">
+            <h2 class="tituloPrac1">Phyton</h2>
+            <p>Lenguaje de mierda</p>
+            <a href="#phyton">Mas información</a>
+        </div>
+
+        <!-- TARJETA 2: JAVASCRIPT -->
+        <div class="tarjeta">
+            <h2 class="tituloPrac1">JAVASCRIPT</h2>
+            <p>Lenguaje aun mas mierda</p>
+            <a href="#javascript">Mas información</a>
+        </div>
+
+        <!-- TARJETA 3: java -->
+        <div class="tarjeta">
+            <h2 class="tituloPrac1">Java</h2>
+            <p>Lenguaje bonito e infravalorado</p>
+            <a href="#java">Más informacion</a>
+        </div>
+
+
+        <!-- TARJETA 4: c++ -->
+        <div class="tarjeta">
+            <h2 class="tituloPrac1">C++</h2>
+            <p>Lenguaje bonito e infravalorado</p>
+            <a href="#cpp">Más informacion</a>
+        </div>
+
+        <!-- TARJETA 5: Ruby -->
+        <div class="tarjeta">
+            <h2 class="tituloPrac1">Ruby</h2>
+            <p>Lenguaje bonito e infravalorado</p>
+            <a href="#ruby">Más informacion</a>
+        </div>
+
+
+        <!-- TARJETA : ++ -->
+        <div class="tarjeta">
+            <h2 class="tituloPrac1">Go</h2>
+            <p class="parrafoTarjeta">Lenguaje bonito e infravalorado</p>
+            <a href="#go">Más informacion</a>
+        </div>
+
+    </div>
+
+
+    <div class="container">
+
+        <div id="html-code">
+            <p class="code-title">HTML CODIGO</p>
+            <p class="code-text">
+                &lt;!-- Contenedor principal de galeria --&gt;<br>
+                &lt;div class="galeria"&gt;<br><br>
+
+                &lt;!-- TARJETA 1: python --&gt;<br>
+                &lt;div class="tarjeta"&gt;<br>
+                &nbsp;&nbsp;&lt;h2 class="tituloPrac1"&gt;Python&lt;/h2&gt;<br>
+                &nbsp;&nbsp;&lt;p&gt;Lenguaje de mierda&lt;/p&gt;<br>
+                &nbsp;&nbsp;&lt;a href="#python"&gt;Mas información&lt;/a&gt;<br>
+                &lt;/div&gt;<br><br>
+
+                &lt;!-- TARJETA 2: JAVASCRIPT --&gt;<br>
+                &lt;div class="tarjeta"&gt;<br>
+                &nbsp;&nbsp;&lt;h2 class="tituloPrac1"&gt;JAVASCRIPT&lt;/h2&gt;<br>
+                &nbsp;&nbsp;&lt;p&gt;Lenguaje aun mas mierda&lt;/p&gt;<br>
+                &nbsp;&nbsp;&lt;a href="#javascript"&gt;Mas información&lt;/a&gt;<br>
+                &lt;/div&gt;<br><br>
+
+                &lt;!-- TARJETA 3: Java --&gt;<br>
+                &lt;div class="tarjeta"&gt;<br>
+                &nbsp;&nbsp;&lt;h2 class="tituloPrac1"&gt;Java&lt;/h2&gt;<br>
+                &nbsp;&nbsp;&lt;p&gt;Lenguaje bonito e infravalorado&lt;/p&gt;<br>
+                &nbsp;&nbsp;&lt;a href="#java"&gt;Más información&lt;/a&gt;<br>
+                &lt;/div&gt;<br><br>
+
+                &lt;!-- TARJETA 4: C++ --&gt;<br>
+                &lt;div class="tarjeta"&gt;<br>
+                &nbsp;&nbsp;&lt;h2 class="tituloPrac1"&gt;C++&lt;/h2&gt;<br>
+                &nbsp;&nbsp;&lt;p&gt;Lenguaje bonito e infravalorado&lt;/p&gt;<br>
+                &nbsp;&nbsp;&lt;a href="#cpp"&gt;Más información&lt;/a&gt;<br>
+                &lt;/div&gt;<br><br>
+
+                &lt;!-- TARJETA 5: Ruby --&gt;<br>
+                &lt;div class="tarjeta"&gt;<br>
+                &nbsp;&nbsp;&lt;h2 class="tituloPrac1"&gt;Ruby&lt;/h2&gt;<br>
+                &nbsp;&nbsp;&lt;p&gt;Lenguaje bonito e infravalorado&lt;/p&gt;<br>
+                &nbsp;&nbsp;&lt;a href="#ruby"&gt;Más información&lt;/a&gt;<br>
+                &lt;/div&gt;<br><br>
+
+                &lt;!-- TARJETA 6: Go --&gt;<br>
+                &lt;div class="tarjeta"&gt;<br>
+                &nbsp;&nbsp;&lt;h2 class="tituloPrac1"&gt;Go&lt;/h2&gt;<br>
+                &nbsp;&nbsp;&lt;p class="parrafoTarjeta"&gt;Lenguaje bonito e infravalorado&lt;/p&gt;<br>
+                &nbsp;&nbsp;&lt;a href="#go"&gt;Más información&lt;/a&gt;<br>
+                &lt;/div&gt;<br><br>
+
+                &lt;/div&gt;
+            </p>
+
+
+        </div>
+
+        <div id="css-code">
+
+            <p class="code-title">CSS código</p>
+            <p class="code-text">
+                &lt;!-- css para practicas --&gt;<br>
+                &lt;style&gt;<br>
+                &nbsp;&nbsp;.tarjeta {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;margin: 0;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;padding: 0;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;box-sizing: border-box;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;background: linear-gradient(135deg, #667eea 0%, #764ba2);<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;min-height: 100vh;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;display: flex;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;flex-direction: column;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;align-items: center;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;justify-content: center;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;padding: 20px;<br>
+                &nbsp;&nbsp;}<br><br>
+
+                &nbsp;&nbsp;.tituloPrac1 {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;color: white;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;text-align: center;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;margin-bottom: 40px;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;font-size: 2.5rem;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);<br>
+                &nbsp;&nbsp;}<br><br>
+
+                &nbsp;&nbsp;.galeria {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;display: grid;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;gap: 30px;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;max-width: 1200px;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;width: 100%;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;padding: 20px;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;margin: auto;<br>
+                &nbsp;&nbsp;}<br><br>
+
+                &nbsp;&nbsp;.tarjeta {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;background: white;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;border-radius: 15px;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;padding: 30px;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;transition: all 0.3s ease;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;cursor: pointer;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;position: relative;<br>
+                &nbsp;&nbsp;}<br><br>
+
+                &nbsp;&nbsp;.tarjeta:hover {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;transform: translateY(-10px) scale(1.02);<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;z-index: 10;<br>
+                &nbsp;&nbsp;}<br><br>
+
+                &nbsp;&nbsp;.tarjeta a:hover {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;background: #764ba2;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;transform: scale(1.05);<br>
+                &nbsp;&nbsp;}<br><br>
+
+                &nbsp;&nbsp;@media (max-width: 768px) {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;h1 { font-size: 1.8rem; margin-bottom: 20px; }<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;.galeria { grid-template-columns: 1fr; gap: 20px; padding: 10px; }<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;.tarjeta { padding: 20px; }<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;.info { background: rgba(255,255,255,0.95); color: #333; padding: 20px;
+                border-radius: 10px; }<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;.parrafoTarjeta { color: black; }<br>
+                &nbsp;&nbsp;}<br>
+                &lt;/style&gt;
+            </p>
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<!-- Indica los lenguajes a los lectores de pantalla -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Es lo primero que aparece en los lectores de pantalla -->
+    <title>Biblioteca Municipal</title>
+</head>
+
+<body>
+
+
+<!-- Permite a los usuarios del teclado/lector ir directo al contenido principal -->
+<!-- Evita oir el contenido de la navegacion -->
+<a href="#main-content" class="skip-link"></a>
+
+<!-- Identificamos el encabezado de la pagina -->
+ <header>
+    <h1>Biblioteca Municipal</h1>
+
+    <!-- <nav> Identifica la navegacion principal -->
+    <!-- aria-label diferencia de la navegacion de otra que pueda existir -->
+    <nav aria-label="Navegacion principal">
+        <ul>
+            <li><a href="#catalogo">Catálogo</a></li>
+            <li><a href="#horarios">Horarios</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+ </header>
+
+    <!-- <main> identifica el contenido principal de la pagina- Solo debe haber uno. -->
+<main id="main-content">
+    <!-- <article> contenido indenpendiente que tiene sentido por si solo -->
+    <article>
+        <h2>Bienvenidos a nuestra biblioteca</h2>
+        <p>Descubre miles de libros y recursos</p>
+
+        <!-- imagen + descripcion -->
+         <!-- alt proporciona descripcion de las imagenes -->
+        <figure>
+            <img src="casa_abandonada.jpg" alt="Viaje_Gonzalo_Portugal_junio">
+            <!-- <figcaption> asocia directamente -->
+            <figcaption>Quinta do conde</figcaption>
+        </figure>
+    </article>
+
+    <!-- <section> agrupa contenido por tematica -->
+    <!-- aria-labelledby conecta la seccion con su titulo para contexto -->
+    <section id="catalogo" aria-labelledby="titulo-catalogo">
+        <h2 id="titulo-catalogo">Buscar en el catalogo</h2>
+        <!-- <aria-label> le damos titulo al formulario -->
+        <form role="search" aria-label="Búsqueda de libros">
+            <!-- fieldet agrupa por funcionalidad los controles del formulario -->
+            <fieldset>
+                <!-- legend proporciona un titulo/descripcion del grupo de campos -->
+                <legend>Criterios de busqueda</legend>
+
+                <!-- Asociado a su campo/input mediante su id -->
+                <label for="busqueda">Titulo o Autor</label>
+
+                <!-- aria-describedby conectamos con el input con el texto de ayuda -->
+                <input type="text" id="busqueda" name="busqueda" aria-describedby="ayuda-busqueda" required>
+                <small id="ayuda-busqueda">Escribe al menos 3 caracteres</small>
+
+                <label for="categoria">Categoria:</label>
+                <!-- Select semantico con opciones -->
+                 <select name="categoria" id="categoria">
+                    <option value="todas" class="1">Todas</option>
+                    <option value="ficcion" class="2">Ficcion</option>
+                    <option value="no-ficcion" class="3">No Ficcion</option>
+                    <option value="infantil" class="4">infantil</option>
+                 </select>
+
+                 <button type="submit" id="btn-buscar">Buscar</button>
+            </fieldset>
+        </form>
+
+        <!-- aria-live="polite" anuncia cambios cuando el usuario esta inactivo -->
+        <!-- aria-atomic="true" lee todo el cotenido no solo lo que cambio -->
+        <!-- aria-label identifica la region para la navegacion -->
+        <div id="resultados" aria-live="polite" aria-atomic="true" role="region" aria-label="resultados de busqueda">
+            <!-- muestra los resultados -->
+        </div>
+    </section>
+    <section id="Horarios">
+        <h2>Horarios de atencion</h2>
+
+        <table>
+            <caption>
+                Horario de apertura semanal
+            </caption>
+            <thead>
+                <tr>
+                    <th scope="col" class="1">Día</th>
+                    <th scope="col" class="2">Horario</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr scope="row">
+                    <th>Lunes a viernes</th>
+                    <td>9:00 <abbr title="ante meridiem">AM</abbr> - 8:00 <abbr title="post meridiem">PM</abbr> </td>
+                </tr>
+                <tr scope="row">
+                    <th>Sábadois</th>
+                    <td>10:00 a 14:00</td>
+                </tr>
+                <tr scope="row">
+                    <th>Domingo</th>
+                    <td>Cerrados</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</main>
+
+<!-- aside para contenido relacionado -->
+ <!-- role="complementary" refuerza que es info suplementaria -->
+  <!-- aria-label describe el proposito de aside -->
+<aside role="complementary" aria-label="informacion adicional">
+    <h2>Aviso Importante</h2>
+    <!-- aria-live="assertive" iterrumpe para aunciar cambios urgentes -->
+    <p id="mensaje-actualizado" aria-live="assertive">
+        La biblioteca estara cerrada el próximo lunes por mantenimiento.
+    </p>
+
+    <button id="btn-leer-aviso" aria-label="Leer aviso en voz alta">Escuchar aviso</button>
+</aside>
+
+<footer>
+    <h2>Contacto</h2>
+    <address>
+        <p>
+            Calle Real, 23 
+        </p>
+
+        <p>
+            Teléfono: <a href="tel:+34777777777">777 77 77 77</a>
+        </p>
+        <p>
+            Email: <a href="mailto:info@biblioteca.es"></a>
+        </p>
+    </address>
+</footer>
+
+</body>
+
+
+<script src="script.js"></script>
+</html>

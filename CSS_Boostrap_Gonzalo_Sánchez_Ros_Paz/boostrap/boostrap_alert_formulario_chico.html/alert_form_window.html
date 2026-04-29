@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window_form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body class="min-vh-100 bg-light">
+
+    <nav class="navbar navbar-expand navbar-dark bg-dark">
+        <a href="#" class="navbar-brand">Windows-Form</a>
+
+        <div class="nav-bar ms-auto">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a href="#" class="nav-link">Parte 1</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Parte 1</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Parte 1</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="my-5">
+
+        <div class="container">
+            <!-- 
+            Oculta si se estrcha
+            d-none -> No muestre nada pero cnd pase de mediano a adelante si va aestar -->
+            <!-- d-md-block: lo muestra como bloque de pantalla medium y superiores -->
+            <div class="d-node d-md-block">
+
+                <div class="card shadow-sm">
+
+                    <div class="card-header bg-primary text-white fw-bold">
+                        <h5>Formulario de contactos</h5>
+                    </div>
+                    <div class="card-body">
+                        <form action="">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-6 mb-3">
+                                        <label for="nombre" class="form-label">Nombre</label>
+                                        <input type="text" id="nombre" name="nombre" class="form-control"
+                                            placeholder="Introduce tu nombre">
+                                    </div>
+                                    <div class="col-lg-6 mb-3">
+                                        <label for="apellido" class="form-label">Apellido</label>
+                                        <input type="text" id="apellido" name="apellido" class="form-control"
+                                            placeholder="Introduce tu apellido">
+                                    </div>
+                                    <div class="col-lg-6 mb-3">
+                                        <label for="email" class="form-label">email</label>
+                                        <input type="email" id="email" name="email" class="form-control"
+                                            placeholder="ejemplo@ejemplo.com">
+                                    </div>
+                                    <div class="col-lg-6 mb-3">
+                                        <label for="dni" class="form-label">DNI</label>
+                                        <input type="text" id="dni" name="dni" placeholder="123456789R"
+                                            class="form-control">
+                                    </div>
+                                    <div class="col-lg-6 mb-3">
+                                        <label for="telefono" class="form-label">Telefono</label>
+                                        <input type="number" id="telefono" name="telefono" placeholder="123456789"
+                                            class="form-control">
+                                    </div>
+                                    <div class="col-lg-6 mb-3">
+                                        <label for="date" class="form-label">Fecha de Nacimiento</label>
+                                        <input type="date" id="date" name="date" placeholder="dd/mm/yyyy"
+                                            class="form-control">
+                                    </div>
+
+                                    <div class="col-lg-6 mb-3">
+                                        <label for="edad" class="form-label">Edad</label>
+                                        <input type="number" id="edad" name="edad" placeholder="123456789R"
+                                            class="form-control">
+                                    </div>
+
+                                    <div class="col-lg-6 mb-3">
+
+                                        <div class="form-check">
+                                            <input type="radio" class="form-check-input">
+                                            <label for="flexRadio" class="form-check-label">Hombre</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="radio" class="form-check-input">
+                                            <label for="flexRadio" class="form-check-label">Mujer</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="radio" class="form-check-input">
+                                            <label for="flexRadio" class="form-check-label">Flamingo</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 mb-3">
+                                        <label for="direccion" class="form-label">Direccion</label>
+                                        <input type="text" id="direccion" name="direccion"
+                                            placeholder="Calle, numero, ciudad, codigo postal" class="form-control">
+                                    </div>
+
+                                    <div class="col-12 mb-3">
+                                        <label for="estudio" class="form-label">Nivel de estudios</label>
+                                        <select class="form-select" name="estudio" id="estudio">
+                                            <option value="informatica">informatica</option>
+                                            <option value="DAM">DAM</option>
+                                            <option value="DAW">DAW</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-12 mb-3">
+                                        <label for="skills" class="form-label">¿Tiene esperiencia previa en
+                                            programacion?</label> <br>
+                                        <label for="skills" class="form-label">HTML</label>
+                                        <input type="checkbox" id="skills" name="skills" class="form-checker"> <br>
+                                        <label for="skills" class="form-label">CSS</label>
+                                        <input type="checkbox" id="skills" name="skills" class="form-checker"> <br>
+                                        <label for="skills" class="form-label">JAVASCRIPT</label>
+                                        <input type="checkbox" id="skills" name="skills" class="form-checker"> <br>
+                                        <label for="skills" class="form-label">JAVA</label>
+                                        <input type="checkbox" id="skills" name="skills" class="form-checker">
+                                    </div>
+
+                                    <div class="col-12 mb-3">
+                                        <label for="textarea" class="form-label">mensaje o consulta</label>
+                                        <textarea name="textareaa" class="form-control" id="textareaa"
+                                            placeholder="Cuentanos....">
+
+                                    </textarea>
+                                    </div>
+
+                                    <div class="col-12 mb-3">
+                                        <input type="checkbox" class="form-checker" name="termino" id="termino">
+                                        <label for="termino" class="form-label">Acepto los terminos</label>
+                                    </div>
+
+                                    <div class="col-12 d-flex justify-content-end gap-3 mb-3">
+                                        <button class="btn btn-secundary" type="reset">Limpiar</button>
+                                        <button class="btn btn-primary" type="submit">Enviar Formulario</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

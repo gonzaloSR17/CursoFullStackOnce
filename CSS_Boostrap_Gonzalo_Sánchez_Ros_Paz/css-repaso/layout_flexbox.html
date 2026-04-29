@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    body{
+        background-color: rgb(132, 132, 132);
+    }
+
+    .container {
+        display: flex;
+        height: 400px;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+    }
+
+    .box {
+        display: flex;
+        width: 150px;
+        height: 150px;
+        text-align: center;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        color: white;
+        margin: 10px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .box.box1{
+        background-color: red;
+    }
+
+    .box.box2{
+        background-color: green;
+    }
+
+    .box.box3{
+        background-color: blue;
+    }
+
+    h1 {
+        color: white;
+        text-align: center;
+    }
+
+
+    /* media querys */
+
+    @media only screen and (max-width: 600px) {
+        .container {
+            display: inline-block; 
+            height: 100%;
+        }
+
+        h1 {
+            font-size: 20px;
+        }
+    }
+
+</style>
+<body>
+
+    <h1>PARTE 2 Practico</h1>
+
+    <div class="container">
+        <div class="box box1">Caja 1</div>
+        <div class="box box2">Caja 2</div>
+        <div class="box box3">Caja 3</div>
+    </div>
+    
+</body>
+</html>

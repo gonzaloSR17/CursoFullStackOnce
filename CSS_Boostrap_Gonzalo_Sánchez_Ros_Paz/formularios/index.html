@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+    <h1>FORMULARIOS HTML BÁSICO</h1>
+
+    <p>Uso de formulario con fieldset y legend</p>
+
+    <p></p>
+
+    <p>El elemento fieldset en HTML se usa para agrupar campos relacionados dentro de un formulario, mientras que legend
+        les da un título, ayudando a organizar visual y semánticamente los datos, mejorar la accesibilidad y hacer que
+        el formulario sea más claro y fácil de entender.</p>
+
+    <p></p>
+
+    <div class="container">
+
+        <div id="html-code">
+
+            <p class="code-title">Código HTML</p>
+
+            <p class="code-text">
+                &lt;form action=&quot;/action_page.php&quot;&gt;
+                &lt;fieldset&gt;
+                &lt;legend&gt;Personalia:&lt;/legend&gt;
+                &lt;label for=&quot;fname&quot;&gt;First name:&lt;/label&gt;
+                &lt;input type=&quot;text&quot; id=&quot;fname&quot; name=&quot;fname&quot;&gt;&lt;br&gt;&lt;br&gt;
+                &lt;label for=&quot;lname&quot;&gt;Last name:&lt;/label&gt;
+                &lt;input type=&quot;text&quot; id=&quot;lname&quot; name=&quot;lname&quot;&gt;&lt;br&gt;&lt;br&gt;
+                &lt;label for=&quot;email&quot;&gt;Email:&lt;/label&gt;
+                &lt;input type=&quot;email&quot; id=&quot;email&quot; name=&quot;email&quot;&gt;&lt;br&gt;&lt;br&gt;
+                &lt;label for=&quot;birthday&quot;&gt;Birthday:&lt;/label&gt;
+                &lt;input type=&quot;date&quot; id=&quot;birthday&quot;
+                name=&quot;birthday&quot;&gt;&lt;br&gt;&lt;br&gt;
+                &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
+                &lt;/fieldset&gt;
+                &lt;/form&gt;
+            </p>
+
+
+        </div>
+
+
+        <div id="css-code">
+
+            <form action="/action_page.php">
+                <fieldset>
+                    <legend>Personalia:</legend>
+                    <label for="fname">First name:</label>
+                    <input type="text" id="fname" name="fname"><br><br>
+                    <label for="lname">Last name:</label>
+                    <input type="text" id="lname" name="lname"><br><br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email"><br><br>
+                    <label for="birthday">Birthday:</label>
+                    <input type="date" id="birthday" name="birthday"><br><br>
+                    <input type="submit" value="Submit">
+                </fieldset>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>

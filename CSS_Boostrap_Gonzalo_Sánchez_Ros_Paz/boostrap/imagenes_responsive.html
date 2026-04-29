@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>imagener Responsive</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <div class="card">
+        <div class="card-header bg-primary">
+            <h1>Imagenes Responsive en Boostrap</h1>
+        </div>
+        <div class="card-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+
+                        <div class="card">
+                            <div class="card-header bg-danger border-danger">
+                                <h1>Imagen No Responsive (Sin .img fluid)</h1>
+                            </div>
+                            <div class="card-body bg-light">
+                                <img src="flamingo.jpg" alt="flamingo">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Se adapta al contendor -->
+                    <div class="col-12 col-md-6">
+                        <div class="card">
+                            <div class="card-header bg-success border-success">
+                                <h1>Imagen Responsive (Con .img fluid) + Image Thumbnails</h1>
+                            </div>
+                            <div class="card-body bg-light">
+                                <img class="img-fluid img-thumbnail" src="flamingo.jpg" alt="flamingo">
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Centrar imagen -->
+
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header bg-success border-success">
+                                <h1>Imagen Responsive (Con .img fluid) + Image Thumbnails</h1>
+                            </div>
+                            <div class="card-body bg-light">
+                                <img class="img-fluid img-thumbnail" src="flamingo.jpg" alt="flamingo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="card">
+            <div class="card-header">
+                <h1>2.- Alineación Horizontal</h1>
+            </div>
+            <div class="card-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-4">
+                            <table class="table-fluid">
+                                <thead>
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th class="item1">a</th>
+                                        <th class="item2">aa</th>
+                                        <th class="item3">aaaa</th>
+                                    </tr>
+                                    <tr>
+                                        <td class="item1">a</td>
+                                        <td class="item2">a</td>
+                                        <td class="item3">a</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="1">a</td>
+                                        <td class="2">aa</td>
+                                        <td class="3">aaa</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-4">
+                            <p>Prueba</p>
+                        </div>
+                        <div class="col-4 justify-content-end">
+                            <table class="table table-hover table-striped">
+                        <thead class="table-dark">
+                            <tr class="item1 bg-dark text-white">
+                                <th scope="col" class="item1">ID</th>
+                                <th scope="col" class="item2">Nombre</th>
+                                <th scope="col" class="item3">Email</th>
+                                <th scope="col" class="item4">Télefono</th>
+                                <th scope="col" class="item5">Ciudad</th>
+                                <th scope="col" class="item6">Estado</th>
+                            </tr>
+                        </thead>
+                        <tr class="">
+                            <td class="item1">1</td>
+                            <td class="item2">Juan Perez</td>
+                            <td class="item3">juan@email.com</td>
+                            <td class="item4">555-1234</td>
+                            <td class="item5">Madrid</td>
+                            <td class="item6"><span class="badge bg-success">Activo</span></td>
+                        </tr>
+                        <tr class="">
+                            <td class="item1">a</td>
+                            <td class="item2">a</td>
+                            <td class="item3">a</td>
+                            <td class="item4">a</td>
+                            <td class="item5">a</td>
+                            <td class="item6"><span class="badge bg-success">Activo</span></td>
+                        </tr>
+                        <tr class="">
+                            <td class="item1">a</td>
+                            <td class="item2">a</td>
+                            <td class="item3">a</td>
+                            <td class="item4">a</td>
+                            <td class="item5">a</td>
+                            <td class="item6"><span class="badge bg-danger">Inactivo</span></td>
+                        </tr>
+                    </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

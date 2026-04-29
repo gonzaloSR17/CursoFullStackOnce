@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector multiples de clases</title>
+</head>
+<style>
+    .caja.importante {
+        border: 3px solid red;
+    }
+</style>
+<body>
+
+    <!-- Crea un selector que afecte a elemento que tenga simultaneamente las clases .caja y 
+    importanye, aplicandole un border de color rojo -->
+    
+    <div class="caja">
+        <p>Esto es una caja no hay nada rojo</p>
+    </div>
+
+    <div class="importante">
+       <p>esto es una caja importante no hay nada</p> 
+    </div>
+
+    <div class="caja importante">
+        <p>esto es una caja importante</p>
+    </div>
+</body>
+</html>

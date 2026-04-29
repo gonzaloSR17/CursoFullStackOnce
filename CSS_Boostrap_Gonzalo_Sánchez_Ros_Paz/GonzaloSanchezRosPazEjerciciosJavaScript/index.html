@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modulo de css</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<style>
+
+    /* EJERCICIO 10*/
+    :root {
+        --var-h1-title: blue;
+    }
+
+
+    h1 {
+        color: var(--var-h1-title);
+    }
+</style>
+
+<body class="min-vh-100 py-4">
+
+    <!-- ==================================================================== -->
+    <!--                            Ejercicio 1: Navbar                       -->
+    <!-- ==================================================================== -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand">Modulo de CSS</a>
+            <button class="navbar-toggler" type="button" data-bs-target="#navbarcollapse" data-toggle="collapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            </div>
+            
+            <div class="collapse navbar-collapse" id="navbarcollapse">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="#Inicio" class="nav-link active">Inicio</a></li>
+                    <li class="nav-item"><a href="#Formulario" class="nav-link">Formulario</a></li>
+                    <li class="nav-item"><a href="#Tablas" class="nav-link">Tablas</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">contactos</a></li>
+                </ul>
+            </div>
+    </nav>
+
+    <div class="container py-5 mt-5">
+
+        <!-- ==================================================================== -->
+        <!--                            Ejercicio 3 & 4: BANNER                       -->
+        <!-- ==================================================================== -->
+
+        <div id="Inicio" class="row mb-5">
+            <div class="col-12 col-md-6 col-lg-6 h-100 d-flex flex-column align-self-center">
+                <h1 class="fw-bold display-4 mb-3">
+                    Aprende Programación web
+                </h1>
+                <p class="lead">
+                    Domina los fundamentos de HTML, CSS y JAVASCRIPT, Este curso te enseñara desde cero como crear
+                    paginas webs modernas y responsivas. utilizando las mejores practicas de la industrias. Aprenderas a
+                    estructurar documentos HTML, estilizar con CSS(incluyendo Bootstap) y añadir interactividad con
+                    JavaScriptr
+                </p>
+            </div>
+            <div class="col-12 col-md-6 col-lg-6">
+                <img src="images/imagen-para-examen.jpg" class="img-fluid rounded shadow-sm" alt="imagen-examen">
+            </div>
+        </div>
+
+
+        <!-- ==================================================================== -->
+        <!--                            Ejercicio 5 & 6 : FORMULARIO              -->
+        <!-- ==================================================================== -->
+
+        <div class="d-lg-none d-block">
+            <div class="alert alert-warning p-4 mt-3">ATENCION PARA ACCEDER AL FORMULARIO TIENES QUE ABRIR MAS LA
+                VENTANA</div>
+        </div>
+
+        <div id="Formulario" class="d-none d-md-block mb-5">
+            <div class="card">
+                <div class="card-header">
+                    <h5>Formulario de contactos</h5>
+                </div>
+                <div class="card-body">
+                    <form action="">
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="nombre" class="form-label">Nombre</label>
+                                <input type="text" id="nombre" class="form-control" placeholder="Introduce tu nombre">
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label for="apellido" class="form-label">Apellidos</label>
+                                <input type="text" id="apellido" class="form-control"
+                                    placeholder="Introduce tus Apellidos">
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="text" id="email" class="form-control" placeholder="123456789A">
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label for="dni" class="form-label">DNI</label>
+                                <input type="text" id="dni" class="form-control" placeholder="ejemplo@correo.com">
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label for="tele" class="form-label">Telefono</label>
+                                <input type="tel" id="tele" class="form-control" placeholder="1234567890">
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label for="fecha" class="form-label">Fecha de Nacimiento</label>
+                                <input type="date" id="fecha" class="form-control" placeholder="dd/mm/aaaa">
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label for="edad" class="form-label">Edad</label>
+                                <input type="number" id="edad" value="18" class="form-control"></label>
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+
+                                <label for="" class="form-label">Sexo</label> <br>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" name="sexo" class="form-check-input">
+                                    <label class="form-check-label" for="">Maculino</label>
+                                </div>
+
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" name="sexo" class="form-check-input">
+                                    <label class="form-check-label" for="">Femenino</label>
+                                </div>
+
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" name="sexo" class="form-check-input">
+                                    <label class="form-check-label" for="">Otros</label>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12 mb-3">
+                                <label for="Direccion" class="form-label">Direccion</label>
+                                <input type="text" id="Direccion" class="form-control"
+                                    placeholder="Calle, númmero, ciudad, código postal"></label>
+                            </div>
+                            <div class="col-md-12 d-flex justify-content-end gap-3 mb-3">
+                                <button type="reset" class="btn btn-secondary">Limpiar</button>
+                                <button type="submit" class="btn btn-primary">Enviar Formulario</button>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ==================================================================== -->
+        <!--                            Ejercicio 7 & 8 : TABLAS                   -->
+        <!-- ==================================================================== -->
+
+        <div id="Tablas" class="row mb-3">
+            <div class="col-md-7 mb-2 mb-">
+                <div class="card">
+                    <div class="card-body">
+                        <table class="table table-hover table-striped table-bordered table-responsive">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th class="text-white">Día</th>
+                                    <th class="text-white">Horario</th>
+                                    <th class="text-white">Modulo</th>
+                                    <th class="text-white">Profesor</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Lunes</td>
+                                    <td>10:00 - 12:00</td>
+                                    <td>HTML fundamentos</td>
+                                    <td>Carlos García</td>
+                                </tr>
+                                <tr>
+                                    <td>Lunes</td>
+                                    <td>12:30 - 14:30</td>
+                                    <td>CSS Básico</td>
+                                    <td>María Lopez</td>
+                                </tr>
+                                <tr>
+                                    <td>Martes</td>
+                                    <td>10:00 - 12:00</td>
+                                    <td>CSS Avanzado</td>
+                                    <td>María Lopez</td>
+                                </tr>
+                                <tr>
+                                    <td>Martes</td>
+                                    <td>12:30 - 14:30</td>
+                                    <td>Boostrap</td>
+                                    <td>Juan Martínez</td>
+                                </tr>
+                                <tr>
+                                    <td>Miercoles</td>
+                                    <td>10:00 - 12:00</td>
+                                    <td>JavaScript Intro</td>
+                                    <td>Ana Sánchez</td>
+                                </tr>
+                                <tr>
+                                    <td>Miercoles</td>
+                                    <td>12:30 - 14:30</td>
+                                    <td>JavaScript DOM</td>
+                                    <td>Ana Sánchez</td>
+                                </tr>
+                                <tr>
+                                    <td>Jueves</td>
+                                    <td>10:00 - 12:00</td>
+                                    <td>Proyectos Prácticos</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Viernes</td>
+                                    <td>10:00 - 13:00</td>
+                                    <td>Tutoría y Resolucion</td>
+                                    <td>Todos</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="card">
+                    <div class="card-body">
+                        <table class="table table-hover table-striped table-bordered">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th class="text-white">Recurso</th>
+                                    <th class="text-white">Tipo</th>
+                                    <th class="text-white">Disponible</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="1">
+                                    <td>Manual HTML5</td>
+                                    <td>PDF</td>
+                                    <td class="text-success">Si</td>
+
+                                </tr>
+                                <tr class="2">
+                                    <td>Lunes</td>
+                                    <td>12:30 - 14:30</td>
+                                    <td class="text-success">Si</td>
+                                </tr>
+                                <tr class="3">
+                                    <td>Martes</td>
+                                    <td>10:00 - 12:00</td>
+                                    <td class="text-success">Si</td>
+                                </tr>
+                                <tr class="4">
+                                    <td>Martes</td>
+                                    <td>12:30 - 14:30</td>
+                                    <td class="text-success">Si</td>
+                                </tr>
+                                <tr class="5">
+                                    <td>Miercoles</td>
+                                    <td>10:00 - 12:00</td>
+                                    <td class="text-success">Si</td>
+                                </tr>
+                                <tr class="6">
+                                    <td>Miercoles</td>
+                                    <td>12:30 - 14:30</td>
+                                    <td class="text-success">Si</td>
+                                </tr>
+                                <tr class="7">
+                                    <td>Jueves</td>
+                                    <td>10:00 - 12:00</td>
+                                    <td class="text-warning">Proximo</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <!-- ==================================================================== -->
+    <!--                            Ejercicio 9 : FOOTER              -->
+    <!-- ==================================================================== -->
+
+    <footer class="bg-dark d-flex justify-content-center fixed-bottom">
+        <p class="text-white">2025 Fin del modulo de css</p>
+        <div class="m-2 p-2">
+
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

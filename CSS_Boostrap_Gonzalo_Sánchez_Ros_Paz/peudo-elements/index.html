@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>CSS Pseudo-Elements</h1>
+
+    <p>Ejemplo de pseudo-elementos:</p>
+
+    <div class="container">
+        <div id="css-code">
+            <p>
+                Un pseudoelemento CSS es una palabra clave que se puede agregar a un selector para dar estilo a una
+                parte
+                específica de un elemento. <br>
+
+                Algunos usos comunes de los pseudoelementos: <br>
+
+            <ul>
+                <li> Dar estilo a la primera letra o primera línea de un elemento <br>
+                </li>
+                <li> Insertar contenido antes o después de un elemento <br>
+                </li>
+                <li> Dar estilo a los marcadores de los elementos de la lista <br>
+                </li>
+                <li> Dar estilo a la parte seleccionada por el usuario de un elemento <br>
+                </li>
+                <li> Dar estilo al cuadro de visualización detrás de un cuadro de diálogo <br>
+                </li>
+            </ul>
+            </p>
+
+        </div>
+        <p class="code-title"></p>
+        <div id="html-code">
+            <p class="code-title">Ejemplo CSS</p>
+            <p class="code-title">Sintaxis
+                Los pseudoelementos se indican mediante dos puntos dobles (::) seguidos del nombre del pseudoelemento:
+            </p>
+            <p class="code-text">selector::pseudo-element-name {
+                CSS properties
+                }</p>
+        </div>
+    </div>
+
+    <h1>El pseudoelemento CSS ::first-line</h1>
+
+    <div class="container">
+        <div id="html-code">
+            <p>El ::first-linepseudoelemento se utiliza para agregar un estilo especial a la primera línea de un texto. <br>
+
+            Nota: El ::first-linepseudoelemento solo se puede aplicar a elementos de nivel de bloque.</p>
+        
+            <p class="primeraLineaEnRojo">El flamenco es un arte tradicional originario de Andalucía, en el sur de España, que combina cante, baile y toque de guitarra. Se caracteriza por su gran expresividad y emoción, transmitiendo sentimientos profundos como la alegría, la tristeza o la pasión. Este arte tiene influencias de diversas culturas, como la gitana, árabe y española, lo que le da un estilo único. Hoy en día, el flamenco es reconocido en todo el mundo y fue declarado Patrimonio Cultural Inmaterial de la Humanidad por la UNESCO en 2010.</p>
+        </div>
+        <div id="css-code">
+            <p class="code-title"> Ejemplo
+Formatear la primera línea de texto en todos los elementos /p : </p>
+<p></p>
+<p class="code-text">p::first-line { <br>
+  color: red; <br>
+  font-variant: small-caps;<br>
+  font-size: 19px; <br>
+}</p>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

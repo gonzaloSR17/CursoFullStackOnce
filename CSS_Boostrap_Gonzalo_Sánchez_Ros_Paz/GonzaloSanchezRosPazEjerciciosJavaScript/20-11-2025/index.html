@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f9;
+        }
+
+        #contenedor-datos{
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            margin: 5px 0;
+        }
+
+        button {
+            padding: 10px 15px;
+            margin-right: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        #botonOnClickHTML {
+            background-color: #28a745;
+            color: white;
+        }
+
+        #botonAddListener {
+            background-color: #ffc107;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Ejemplo de Fetch y JSON</h1>
+        <p>Los datos del api se cargarn a continuacion</p>
+    </header>
+
+    <div id="contenedor-datos">
+        <h2>Detalles de la publicación</h2>
+        <p><strong>ID del usuario:</strong> <span id="userId">Cargando...</span></p>
+        <p><strong>Titulo:</strong><span id="title">Cargando...</span></p>
+        <p><strong>Cuerpo:</strong> <span id="body">Cargando...</span></p>
+        <button onclick="obtencionDeDatos()" id="botonOnClickHTML">Cargar Opcion (onClick)</button>
+        <button id="botonAddListener">Cargar  Opcion con escuchado de evento</button>
+
+    </div>
+    
+</body>
+<script>
+
+// asyncrona el servidor puede tardar un rato: como hay que esperar un tiempo hacemos que esta funcion pasa a un segundo plano
+// y una vez que haya una respuesta pasa al hilo principal pa ejecutar la funcion, la respuesta viene asincrona
+
+// todo async tiene su await para un mejor manejo
+
+    async function obtencionDeDatos() {
+       //URL Servidor la cual no se necesitan token, este server devuelve un objeto localizado en un servidor y lo INVOCAREMOS EN NUESTROS HTML SIIIII
+        const urlApi = "https://jsonplaceholder.typicode.com/posts/1" 
+
+        //Try y catch es intentar traer los datos del server, en caso de error me lo comunicara en la consola
+        try{
+            //Realizar una llamada y ver si devuelve una respuesta
+            const respuesta = await fetch(urlApi)
+
+            //y vemos si todo esta bien en el servidor, si no es asi salta esta condicional y termina el try
+            if(!respuesta.ok) {
+                throw new Error(`Error HTTP! Estado: ${respuesta.status}`) // con status podemos ver que pasa
+            }
+
+            // Esperamos a que el cuerpo de la respuesta se convierte en un objeto js
+            const datos = await respuesta.json();
+
+            // 2 Llamamos a los elemento de dom que queremos asignar y lo estableceremos
+            document.getElementById('userId').textContent = datos.userId;
+            document.getElementById('title').textContent = datos.title;
+            document.getElementById('body').textContent = datos.body;
+
+        } catch (error) {
+            console.error("Error al cargar los datos: ", error);
+        }
+    }
+
+
+    // DOM CONTENT LOADED -> Cuando este cargado ya puede funcionar....
+    document.addEventListener('DOMContentLoaded', function() {
+        const botonAddListener = document.getElementById('botonAddListener');
+        if (botonAddListener) {
+            botonAddListener.addEventListener('click', obtencionDeDatos);
+        }
+    })
+    
+</script>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- boostrap icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+
+<style>
+    /* Temas de root */
+    :root {
+
+        --background-video: rgb(173, 0, 173);
+        --title-backgroung-video: rgb(255, 207, 96);
+        
+    }
+
+    div ul {
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+    }
+
+    #banner2 {
+        background-image: url("images/banner-2.jpg");
+    }
+
+    #video-section {
+        background: var(--background-video);
+    }
+
+    #video-section h1 {
+    color: var(--title-backgroung-video);
+    font-size: 40px;
+    }
+
+    #video-section p {
+        color: var(--title-backgroung-video);
+        font-size: 30px;
+    }
+
+    #logoDisney {
+        width: 70px;
+    }
+
+    #sinopsis {
+            font-size: 17px;
+            shado
+    }
+
+    #banner3 {
+       background-image: url(images/Captura\ de\ pantalla\ 2025-11-16\ 190141.png); 
+    }
+
+    
+
+    a:hover {
+        color: blue;
+    }
+
+    @media only screen and (max-width: 700px) {
+        li {
+            border-bottom: 2px solid rgb(121, 121, 121);
+        }
+
+        #sinopsis {
+            font-size: 12px;
+        }
+
+    }
+</style>
+
+<body>
+
+    <!-- Importante poner nav-expand-lg -->
+    <nav class="navbar navbar-expand-lg bg-white">
+        <div class="container-fluid">
+            <div>
+                <!-- navbar toggler configuracion del boton -->
+                <div class="d-flex justify-content-between">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbar_disney">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <a class="d-flex align-items-center justify-content-center" href="#"><img
+                            src="images/Disney_wordmark.svg" class="img-fluid d-md-none d-block w-25"
+                            alt="logo_disney"></a>
+                    <button class="btn bg-white p-2 d-md-none d-block "><i class="bi bi-search"></i></button>
+                </div>
+
+                <div class="collapse navbar-collapse" id="navbar_disney">
+                    <ul class="navbar-nav d-flex align-items-center">
+                        <a href="#" class="navbar-brand d-none d-md-block ">Disney</a>
+                        <!-- Ponemos w-100 para que el li ocupe todo su ancho, gracias a esto el border que aplicamops en css llega hasta el final -->
+                        <li class="nav-item fw-bold w-100 p-2"><a class="nav-link" href="#">Disney+</a></li>
+                        <li class="nav-item fw-bold w-100 p-2"><a class="nav-link" href="#">Parques y Atracciones</a>
+                        </li>
+                        <li class="nav-item fw-bold w-100 p-2"><a class="nav-link" href="#">Peliculas</a></li>
+                        <li class="nav-item fw-bold w-100 p-2"><a class="nav-link" href="#">Tienda</a></li>
+                        <li class="nav-item fw-bold w-100 p-2"><a class="nav-link" href="#">Noticias</a></li>
+                        <li class="nav-item fw-bold w-100 p-2"><a class="nav-link" href="#">D23</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Para los input groups debes crear un div -->
+            <div>
+                <div class="input-group d-flex">
+                    <input type="text" class="form-control bg-light border-3 d-none ps-5 rounded d-md-block"
+                        placeholder="Buscar...">
+                    <button class="btn bg-white p-2 d-none d-md-block"><i class="bi bi-search"></i></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <img src="images/zootopia-hero.png" class="img-fluid w-100" alt="BANNER">
+
+    <div id="video-section">
+        <div class="container py-md-5 py-4">
+            <div class="row">
+                <div class="col-12 col-md-7 mb-4 mb-md-0 mb-lg-0">
+                    <video src="images/zootopia_trailer.mp4" class="img-fluid w-100" controls autoplay muted></video>
+                </div>
+                <div class="col-12 col-md-5">
+                    <h1 class="mb-4">Zootopia Trailer</h1>
+                    <p>¡De los creadores de Frozen y Big Hero 6, este 7 de junio lleva a tu casa Zootopia de Disney en
+                        Blu-ray, Digital HD y Disney movies Anywhere!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="banner2" class="p-5 d-flex flex-column justify-content-center align-items-center">
+        <h1 class="mb-2">Zootopia</h1> <br>
+        <p id="sinopsis" class="px-5 px-md-5 fs-sm-4">De Walt Disney Animation Studios llega una comedia de aventuras ambientada en la moderna metrópolis mamífera de Zootopia. Decidida a probarse a sí misma, la oficial de policía Judy Hopps, el primer conejito en la fuerza policial de Zootopia, acepta de inmediato cuando surge la oportunidad de investigar su primer caso, aunque eso signifique trabajar junto a un zorro charlatán y estafador llamado Nick Wilde para resolver el misterio. Lleva a tu hogar esta comiquísima aventura repleta de acción, emociones y gran cantidad de material adicional para adentrarte aún más en el mundo de Zootopia. ¡Diversión garantizada para todas las edades y especies!</p>
+    </div>
+
+    <div>
+        <video src="images/video_2.mp4" autoplay muted loop class="w-100 img-fluid"></video>
+    </div>
+
+    <div id="banner3">
+        <div class="container p-4">
+            <h3 class="py-4">Videos</h3>
+            <div class="row">
+                <div class="col-4">
+                    <a href="#">
+                        <img src="images/video-1.png" class="img-fluid rounded" alt="peli-zootopia">
+                   </a>
+                </div>
+                <div class="col-4">
+
+                </div>
+                <div class="col-4">
+
+                </div>
+                <div class="col-4">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="footer bg-white py-2">
+        <div class=" d-flex flex-column justify-content-center">
+            <img src="images/Disney_wordmark.svg" class="mx-auto py-4" id="logoDisney" alt="logo_disney">
+            
+                <ul class="d-flex justify-content-center list-unstyled gap-4">
+                    <li><a href="#" class="fs-6 text-decoration-none text-dark">Link</a></li>
+                    <li><a href="#" class="fs-6 text-decoration-none text-dark">Link</a></li>
+                    <li><a href="#" class="fs-6 text-decoration-none text-dark">Link</a></li>
+                    <li><a href="#" class="fs-6 text-decoration-none text-dark">Link</a></li>
+                    <li><a href="#" class="fs-6 text-decoration-none text-dark">Link</a></li>
+                    <li><a href="#" class="fs-6 text-decoration-none text-dark">Link</a></li>
+                </ul>
+                <ul class="d-flex justify-content-center list-unstyled gap-4">
+                    <li><a href="#" class="fs-6 text-decoration-none text-dark">Link</a></li>
+                    <li><a href="#" class="fs-6 text-decoration-none text-dark">Link</a></li>
+                    <li><a href="#" class="fs-6 text-decoration-none text-dark">Link</a></li>
+                    <li><a href="#" class="fs-6 text-decoration-none text-dark">Link</a></li>
+                    <li><a href="#" class="fs-6 text-decoration-none text-dark">Link</a></li>
+                    <li><a href="#" class="fs-6 text-decoration-none text-dark">Link</a></li>
+                </ul>
+            <div class="d-flex justify-content-center">
+                <small>© 2025 Disney and its related entities, Disney Entertainment</small>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="js/bootstrap.bundle.min.js">
+
+    </script>
+</body>
+
+</html>
